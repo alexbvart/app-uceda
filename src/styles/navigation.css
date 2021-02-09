@@ -1,0 +1,10 @@
+.bg-active{
+    background-color: var(--action);
+}
+
+.a-link-nav:focus,
+.a-link-nav:active
+{
+    background-color: var(--action);
+}
+
