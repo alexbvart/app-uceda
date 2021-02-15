@@ -180,7 +180,7 @@ const FormProduct = ({ refreshGetProducts }) => {
                     </div>
 
                     <div className="input-wrapper">
-                        <label htmlFor="brandSelected">Categoria</label>
+                        <label htmlFor="brandSelected">Marca</label>
                         <select 
                             name="brandSelected" 
                             onChange={onAllInputChange}

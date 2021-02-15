@@ -10,6 +10,7 @@ import Product from './pages/Product'
 import Brand from './pages/Brand'
 import Client from './pages/Client'
 import Navigation from './components/Navigation';
+import Employees from './pages/Employees';
 
 
 function App() {
@@ -30,10 +31,8 @@ function App() {
             <Route exact path='/cliente' component={Client}/>
             <Route exact path='/categoria' component={Category}/>
             <Route  exact path='/marca' component={Brand}/>
-
-            
+            <Route  exact path='/empleado' component={Employees}/>           
           </div>
-        
       </Router>
 
 

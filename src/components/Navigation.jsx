@@ -17,7 +17,7 @@ const Navigation = () => {
                         <span className="leading-none">Stock</span>
                     </Link>
 
-                    <label className="my-4"> Gestiòn</label>
+                    <label className="my-4"> Gestión</label>
                     <Link 
                         to="/producto"
                         className="flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
@@ -37,6 +37,14 @@ const Navigation = () => {
                         to="/marca"
                         className="flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
                         <span className="leading-none">Marca</span>
+                    </Link>
+
+
+
+                    <Link 
+                        to="/empleado"
+                        className="flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
+                        <span className="leading-none">Empleado</span>
                     </Link>
 
             </div>

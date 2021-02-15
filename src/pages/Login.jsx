@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import ButtonSubmit from '../utils/ButtonSubmit';
-import Input from '../utils/Input';
 const Login = () => {
 
     const URLsignin = "http://localhost:5000/signin";
@@ -27,7 +26,7 @@ const Login = () => {
         const res = await axios.post(URLsignin,{
             username: username.username,
             password: password.password
-        })
+        }) 
         console.log(res.data.token);
     }
 

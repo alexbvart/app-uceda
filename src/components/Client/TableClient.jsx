@@ -1,22 +1,22 @@
 import React from 'react';
 import axios from 'axios';
 
-const TableProduct = ({ products, refreshGetProducts }) => {
+const TableClient = ({ client, refreshGetClient }) => {
 
-    const baseURL = 'http://localhost:5000/productos';
+    const baseURLClient = 'http://localhost:5000/cliente';
 
-    const deleteProduct = async (id) => {
-        await axios.delete(`${baseURL}/${id}`)
-        refreshGetProducts();
-        console.log(`${baseURL}/${id}`);
+    const deleteClient = async (id) => {
+        await axios.delete(`${baseURLClient}/${id}`)
+        refreshGetClient();
+        console.log(`${baseURLClient}/id`);
     }
 
     return (
         <>
-            <div className='flex flex-col items-center justify-center '>
+            <div className='flex flex-col items-center justify-center'>
 
-                <h1 className='text-lg font-medium'>Productos registrados</h1>
-                <div className="flex flex-col mt-6">
+                <h1 className='text-lg font-medium'>Cliente registrados</h1>
+                <div className='flex flex-col mt-6'>
 
                     <table className='min-w-full text-sm text-gray-400'>
                         <thead className='text-xs uppercase font-medium'>
@@ -26,24 +26,24 @@ const TableProduct = ({ products, refreshGetProducts }) => {
                                     Nombre
                                 </th>
                                 <th scope='col' className='px-6 py-3 text-left tracking-wider'>
-                                    Descripcion
+                                    Apellido
                                 </th>
                                 <th scope='col' className='px-6 py-3 text-left tracking-wider'>
-                                    Precio
+                                    DNI
                                 </th>
                                 <th scope='col' className='px-6 py-3 text-left tracking-wider'>
-                                    Stock
+                                    Número de telefono
                                 </th>
                             </tr>
                         </thead>
                         <tbody className=''>
                             {
-                                products.map((item) => (
+                                client.map((item) => (
                                     <tr
                                         key={item._id}
-                                        className=""
+                                        className=''
                                         onDoubleClick={
-                                            () => deleteProduct(item._id)
+                                            () => deleteClient(item._id)
                                         }
                                     >
                                         <td className='px-6 py-4 '>
@@ -51,15 +51,15 @@ const TableProduct = ({ products, refreshGetProducts }) => {
                                         </td>
 
                                         <td className='px-6 py-4'>
-                                            <span className='ml-2 font-large'>{item.description}</span>
+                                            <span className='ml-2 font-large'>{item.lastname}</span>
                                         </td>
 
                                         <td className='px-6 py-4'>
-                                            <span className='ml-2 font-large'>S/. {item.price}0</span>
+                                            <span className='ml-2 font-large'>{item.dni}</span>
                                         </td>
 
                                         <td className='px-6 py-4'>
-                                            <span className='ml-2 font-large'>{item.stock}</span>
+                                            <span className='ml-2 font-large'>{item.phone}</span>
                                         </td>
                                     </tr>
                                 ))
@@ -71,4 +71,4 @@ const TableProduct = ({ products, refreshGetProducts }) => {
         </>
     );
 }
-export default TableProduct;
+export default TableClient;
