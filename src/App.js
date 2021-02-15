@@ -11,6 +11,7 @@ import Brand from './pages/Brand'
 import Client from './pages/Client'
 import Navigation from './components/Navigation';
 import Employees from './pages/Employees';
+import Workstation from './pages/Workstation';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route exact path='/categoria' component={Category}/>
             <Route  exact path='/marca' component={Brand}/>
             <Route  exact path='/empleado' component={Employees}/>           
+            <Route  exact path='/puesto' component={Workstation}/>           
           </div>
       </Router>
 

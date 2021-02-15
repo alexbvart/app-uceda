@@ -1,11 +1,15 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form'
 
-const FormEmployees = ({ refreshGetEmployees }) => {
+import React, { useContext } from 'react';
+import { useForm } from 'react-hook-form'
+import axios from 'axios';
+import EmployeeContext from '../../context/Employees/EmployeeContext';
+
+
+const FormEmployees = () => {
 
     const { register, errors, handleSubmit } = useForm();
-    const baseURLEmpleado = 'http://localhost:5000/empleado';
+
+    const { EMPLOYEES_API_URL, getEmployees } = useContext(EmployeeContext)
 
 
     const onSubmit = async (data, event) => {
@@ -17,9 +21,9 @@ const FormEmployees = ({ refreshGetEmployees }) => {
             dni: data.dni,
             email: data.email
         }
-        const res = await axios.post(baseURLEmpleado, NewEmployee);
+        const res = await axios.post(EMPLOYEES_API_URL, NewEmployee);
         console.log(res);
-        refreshGetEmployees();  
+        getEmployees();  
         event.target.reset();  
     }
 

@@ -1,31 +1,25 @@
-import axios from 'axios';
-import React, {useState,useEffect} from 'react';
+import React from 'react';
+
+
+/* Compopnents */
 import FormEmployees from '../components/Employees/FormEmployess';
 import TableEmployees from '../components/Employees/TableEmployees';
 
+/* CONTEXT */
+import EmployeeState from "../context/Employees/EmployeeState";
+
 const Employees = () => {
 
-    const baseURLempleado ='http://localhost:5000/empleado';
-
-    const [employees, setEmployees] = useState([])
-
-    const getEmployees = async()=>{
-        const res = await axios.get(baseURLempleado);
-        setEmployees(res.data)
-    }
-
-    useEffect( async () => {
-        await getEmployees()
-        /* return () => {
-            cleanup
-        } */
-    }, [])
 
 
-    return ( 
-        <div className="main">
-            <FormEmployees  refreshGetEmployees={getEmployees} />
-            <TableEmployees refreshGetEmployees={getEmployees} employees={employees} />
+    return (
+        <div className="main-full">
+            <EmployeeState >
+                <FormEmployees />
+                <TableEmployees />
+                {/* <FormEmployees  refreshGetEmployees={getEmployees} />
+                    <TableEmployees refreshGetEmployees={getEmployees} employees={employees} /> */}
+            </EmployeeState>
         </div>
     );
 }

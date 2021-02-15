@@ -46,6 +46,11 @@ const Navigation = () => {
                         className="flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
                         <span className="leading-none">Empleado</span>
                     </Link>
+                    <Link 
+                        to="/puesto"
+                        className="flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
+                        <span className="leading-none">Puesto </span>
+                    </Link>
 
             </div>
 
