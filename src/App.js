@@ -4,7 +4,6 @@ import Header from './components/Header'
 import Dark from './components/Dark'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
-import Sell from './pages/Sell'
 import Category from './pages/Category'
 import Product from './pages/Product'
 import Brand from './pages/Brand'
@@ -12,6 +11,7 @@ import Client from './pages/Client'
 import Navigation from './components/Navigation';
 import Employees from './pages/Employees';
 import Workstation from './pages/Workstation';
+import Sale from './pages/Sale';
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           <div className="grid-wrapper">
             <Navigation />
             <Route exact path='/home' component={Dashboard}/>
-            <Route exact path='/venta' component={Sell}/>
+            <Route exact path='/venta' component={Sale}/>
             <Route exact path='/producto' component={Product}/>
             <Route exact path='/cliente' component={Client}/>
             <Route exact path='/categoria' component={Category}/>

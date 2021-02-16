@@ -32,7 +32,6 @@ const FormEmployees = () => {
         <>
             <form onSubmit={handleSubmit(onSubmit)}
                 className='card-form m-auto'>
-                <div className="text" >
                     <div className="title">
                         Nuevo Empelado
                     </div>
@@ -160,8 +159,6 @@ const FormEmployees = () => {
                         </span>
                     </div>
 
-
-
                     <div className="buttons mt-8">
                         <button className="button"
                         >
@@ -175,7 +172,6 @@ const FormEmployees = () => {
                             Do it!
                         </button>
                     </div>
-                </div>
             </form>
         </>
     );

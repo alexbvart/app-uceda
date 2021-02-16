@@ -7,16 +7,15 @@ const WorkstationState = ({children}) => {
     const WORKSTATION_API_URL ='http://localhost:5000/puesto';
     const [workStation, setWorkStation] = useState([])
 
-    const getWorkstationState = async()=>{
+    const getWorkstation = async()=>{
         const res = await axios.get(WORKSTATION_API_URL);
         console.log(res.data);
         setWorkStation(res.data) 
     }
 
-    const deleteWorkstationState = async (id) => {
+    const deleteWorkstation = async (id) => {
         await axios.delete(`${WORKSTATION_API_URL}/${id}`)
-        getWorkstationState();
-
+        getWorkstation();
     }
 
     return (
@@ -24,8 +23,8 @@ const WorkstationState = ({children}) => {
             value={{
                 WORKSTATION_API_URL,
                 workStation,
-                getWorkstationState,
-                deleteWorkstationState
+                getWorkstation,
+                deleteWorkstation
             }}
         >
             {children}
