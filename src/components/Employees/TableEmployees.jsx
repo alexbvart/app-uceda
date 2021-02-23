@@ -33,12 +33,12 @@ const TableEmployees = () => {
                                 <th scope='col' className='px-3 py-3 text-left tracking-wider'>
                                     E-mail
                                 </th>
-                                <th scope='col' className='px-3 py-3 text-left tracking-wider'>
+                                {/* <th scope='col' className='px-3 py-3 text-left tracking-wider'>
                                     Cumpleaños
                                 </th>
                                 <th scope='col' className='px-3 py-3 text-left tracking-wider'>
                                     Puesto
-                                </th>
+                                </th> */}
                                 {/* <th scope='col' className='px-6 py-3 text-left tracking-wider'>
                                     Usuario
                                 </th> */}
@@ -66,12 +66,12 @@ const TableEmployees = () => {
                                             <span className='ml-2 font-large'>{item.email}</span>
                                         </td>
 
-                                        <td className='px-6 py-4'>
+                                        {/* <td className='px-6 py-4'>
                                             <span className='ml-2 font-large'>{item.phone}</span>
                                         </td>
                                         <td className='px-6 py-4'>
                                             <span className='ml-2 font-large'>{item.workstation}</span>
-                                        </td>
+                                        </td> */}
                                         {/* <td className='px-6 py-4'>
                                             <span className='ml-2 font-large'>{item.user}</span>
                                         </td> */}

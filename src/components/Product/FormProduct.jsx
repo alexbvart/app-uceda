@@ -143,6 +143,7 @@ const FormProduct = ({ refreshGetProducts }) => {
                         <label htmlFor="name">Precio</label>
                         <input
                             type="number"
+                            min="1"
                             name="price"
                             value={price.price}
                             className="input"
@@ -156,6 +157,7 @@ const FormProduct = ({ refreshGetProducts }) => {
                         <label htmlFor="name">Stock inicial</label>
                         <input
                             type="number"
+                            min="1"
                             name="stock"
                             value={stock.stock}
                             className="input"

@@ -4,8 +4,7 @@ import DetailSaleContext from '../../context/Sale/SaleContext';
 
 const FormDetailSale = () => {
 
-    const { detail,setDetail, getDetail } = useContext(DetailSaleContext)
-
+    const { detailRender, setDetailRender, detail,setDetail, getDetail } = useContext(DetailSaleContext)
 
     const [products, setProducts] = useState([])
 
@@ -46,22 +45,41 @@ const FormDetailSale = () => {
 
     useEffect(() => {
         getProducts()
-        console.log("detalle: ",detail);
 
     }, [])
 
-    /* const [detailSale, setDetailSale] = useState([]) */
 
-    const onSubmitForm = (e) => {
+    const onSubmitForm = async (e) => {
         e.preventDefault();
-        /* console.log(cuantity.cuantity,productSelected.productSelected ); */
+        
+        let porductGet = await axios.get(`${PRODUCT_API_URL}/${productSelected.productSelected}`);
+        porductGet = porductGet.data
+        console.log('traer datos del producto: ',porductGet);
+
+        if ( parseInt(porductGet.stock)  >= parseInt(cuantity.cuantity)) {
+            console.log('todo normal');
+            cuantity.cuantity = cuantity.cuantity
+        } else {
+            alert(`stock no suficiente, solo hay: ${porductGet.stock} ${porductGet.name} disponibles `)
+            cuantity.cuantity = porductGet.stock
+        }
 
         const NewDetailSale = {
             cuantity: cuantity.cuantity,
             product: productSelected.productSelected
         }
-        console.log(NewDetailSale);
+        
+        const NewDetailSaleRender = {
+            cuantity: cuantity.cuantity,
+            product: porductGet.name,
+            subtotal: cuantity.cuantity * porductGet.price
+        }
+        
+        console.log('detail ___',NewDetailSale);
         setDetail([...detail, NewDetailSale])
+
+        console.log('...detailRender ___',NewDetailSaleRender);
+        setDetailRender([...detailRender, NewDetailSaleRender])
 
         getDetail()
 /*
@@ -76,7 +94,7 @@ const FormDetailSale = () => {
 
             <form onSubmit={onSubmitForm} className="-mx-3 md:flex mb-2 md:content-end">
                 <div className="md:w-1/2 px-3 mb-4 md:mb-0">
-                    <label htmlFor="categorySelected">Categoria</label>
+                    <label htmlFor="categorySelected">Producto</label>
                     <select
                         name="productSelected"
                         onChange={onAllInputChange}
@@ -89,9 +107,10 @@ const FormDetailSale = () => {
                     </select>
                 </div>
                 <div className="md:w-1/2 px-3">
-                    <label forhtml='cuantity'>cuantity</label>
+                    <label forhtml='cuantity'>Cantidad</label>
                     <input
                         type='number'
+                        min = "1"
                         name='cuantity'
                         placeholder='Ingrese cuantity'
                         className='input'

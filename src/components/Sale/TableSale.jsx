@@ -30,8 +30,11 @@ const TableSale = () => {
                                     Total
                                 </th>
                                 <th scope='col' className='px-3 py-2 text-left tracking-wider'>
-                                    Usuario
+                                    INC IGV
                                 </th>
+                                {/* <th scope='col' className='px-3 py-2 text-left tracking-wider'>
+                                    Usuario
+                                </th> */}
                             </tr>
                         </thead>
                         <tbody>
@@ -53,12 +56,23 @@ const TableSale = () => {
                                         </td>
 
                                         <td className='px-3 py-2'>
-                                            <span className='ml-2 font-large'>S/. {item.total}</span>
+                                            <span className='ml-2 font-large'>
+                                                S/. {(parseFloat(item.total))%1 ? parseFloat(item.total) : `${parseFloat(item.total)}.00 `}
+                                            
+                                            </span>
                                         </td>
 
                                         <td className='px-3 py-2'>
+                                            <span className='ml-2 font-large'>
+                                            S/. {
+                                                (parseFloat(item.total)*1.18)%1 ? parseFloat(item.total*1.18).toFixed(2) : `${parseFloat(item.total)*1.18}.00 `
+                                            }
+                                            </span>
+                                        </td> 
+
+                                        {/* <td className='px-3 py-2'>
                                             <span className='ml-2 font-large'>{item.user}</span>
-                                        </td>
+                                        </td> */}
                                     </tr>
                                 ))
                             }

@@ -3,9 +3,9 @@ import DetailSaleContext from '../../context/Sale/SaleContext';
 
 const TableDetailSale = () => {
 
-const { detail, getDetail , deleteDetail} = useContext(DetailSaleContext)
+const { detailRender, getDetail , deleteDetail} = useContext(DetailSaleContext)
 useEffect(() => {
-    getDetail()
+    /* getDetail() */
     /* return () => {
         cleanup
    } */
@@ -28,12 +28,15 @@ useEffect(() => {
                                 <th scope='col' className='px-3 py-2 text-left tracking-wider'>
                                     Producto
                                 </th>
+                                <th scope='col' className='px-3 py-2 text-left tracking-wider'>
+                                    Subtotal
+                                </th>
                                 
                             </tr>
                         </thead>
                         <tbody className=''>
                             {
-                                detail.map((item) => (
+                                detailRender.map((item) => (
                                     <tr
                                         key={item.product}
                                         className=''
@@ -47,6 +50,9 @@ useEffect(() => {
 
                                         <td className='px-6 py-4'>
                                             <span className='ml-2 font-large'>{item.product}</span>
+                                        </td>
+                                        <td className='px-6 py-4'>
+                                            <span className='ml-2 font-large'>{item.subtotal}</span>
                                         </td>
 
                                     </tr>

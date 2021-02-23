@@ -55,7 +55,10 @@ const TableProduct = ({ products, refreshGetProducts }) => {
                                         </td>
 
                                         <td className='px-6 py-4'>
-                                            <span className='ml-2 font-large'>S/. {item.price}0</span>
+                                            <span className='ml-2 font-large'>
+                                            S/.{(parseFloat(item.price))%1 ? parseFloat(item.price) : `${parseFloat(item.price)}.00 `}
+                                            </span>
+                                            
                                         </td>
 
                                         <td className='px-6 py-4'>

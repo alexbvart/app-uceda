@@ -5,7 +5,7 @@ import SaleContext from '../../context/Sale/SaleContext';
 const FormSale = () => {
 
 
-    const { SALE_API_URL, getSales, detail,setDetail } = useContext(SaleContext)
+    const { SALE_API_URL, detailRender, getSales, detail,setDetail } = useContext(SaleContext)
 
     const [client, setClient] = useState([])
 
@@ -58,20 +58,39 @@ const FormSale = () => {
         setDetail([])
     }
 
+    const getTotal = (detailRender) => {
+        let totalpush = 0
+        detailRender.forEach(element => {
+            totalpush = parseFloat(totalpush) + parseFloat(element.subtotal)
+        });
+        return totalpush;
+    } 
+    let totalPost = getTotal(detailRender);
+    /* let totalForm = document.getElementById('total')
+    totalForm.value = parseInt(totalPost) */
+    /* total.total = parseInt(totalPost) */
+   
+
+     
+    /* const totalPost = detail.reduce((accumulator, subtotal) => accumulator + subtotal,0);
+ */
+
+    console.log('taotal reducer: ',totalPost);
+
     const onSubmitForm = async (e) => {
         e.preventDefault();
         console.log(date.date,total.total,clientSelected.clientSelected);
         const NewSale = {
             date: Date(date.date),
-            total: total.total,
+            total: totalPost,
             client: clientSelected.clientSelected,
             details: detail
         }
         const res = await axios.post(SALE_API_URL, NewSale);
         console.log(res); 
         console.log("actual venta: ",NewSale);
-        getSales();
-        refreshDetails()
+        await refreshDetails()
+        await getSales();
         e.target.reset();
     }
 
@@ -97,9 +116,11 @@ const FormSale = () => {
                     <input
                         type='number'
                         name='total'
+                        id='total'
                         placeholder='Total'
                         className='input'
                         onChange={onAllInputChange}
+                        disabled
                     ></input>
                 </div>
                 <div className="md:w-1/2 px-3">

@@ -22,6 +22,7 @@ const SaleState = ({children}) => {
 
 
     const [detail, setDetail] = useState([])
+    const [detailRender, setDetailRender] = useState([])
 
     const getDetail = async()=>{
         /* const res = await axios.get(SALE_API_URL);
@@ -46,6 +47,8 @@ const SaleState = ({children}) => {
                     detail,
                     setDetail,
                     getDetail,
+                    detailRender,
+                    setDetailRender,
                     deleteDetail
                 }}
         >
