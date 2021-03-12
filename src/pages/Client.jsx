@@ -24,7 +24,7 @@ const Client = () => {
 
     return ( 
         <>
-        <div className="main">
+        <div className="main-full">
             <FormClient  refreshGetClient={getClient}  />
             <TableClient refreshGetClient={getClient} client={client} />
         </div>

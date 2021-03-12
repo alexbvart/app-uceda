@@ -4,7 +4,7 @@ const Navigation = () => {
     return ( 
         <div className="navigation">
             
-            <div className=" a-link-nav flex flex-col flex-grow p-4 overflow-auto">
+            <div className=" p-sticky-135 a-link-nav flex flex-col flex-grow p-4 overflow-auto">
                     <label className="my-4">Operaciones</label>
                     <Link 
                         to="venta"
@@ -15,6 +15,11 @@ const Navigation = () => {
                         to="/stock"
                         className="flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
                         <span className="leading-none">Stock</span>
+                    </Link>
+                    <Link 
+                        to="/outlest"
+                        className="flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
+                        <span className="leading-none">Bajas de Productos</span>
                     </Link>
 
                     <label className="my-4"> Gestión</label>

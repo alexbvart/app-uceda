@@ -21,7 +21,7 @@ const Product = () => {
     }, [])
 
     return ( 
-        <div className="main">
+        <div className="main-full">
             <FormProduct refreshGetProducts={getProducts} />
             <TableProduct products={products} refreshGetProducts={getProducts} />
         </div>

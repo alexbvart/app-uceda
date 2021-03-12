@@ -33,7 +33,7 @@ const FormEmployees = () => {
             <form onSubmit={handleSubmit(onSubmit)}
                 className='card-form m-auto'>
                     <div className="title">
-                        Nuevo Empelado
+                        Nuevo empleado
                     </div>
                     <div className="info mb-4">
                         Es bueno contar con alguien mas en Electrnica Uceda, ingrese sus datos.

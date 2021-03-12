@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useContext, useEffect } from 'react';
 import SaleContext from "../../context/Sale/SaleContext";
 
@@ -8,6 +9,15 @@ const TableSale = () => {
         getSales()
         console.log("sale:",sales);
     }, [])
+
+    const CLIENT_API_URL = 'http://localhost:5000/cliente';
+
+    const getCLient = async (item) => {
+        let res = await axios.get(`${CLIENT_API_URL}/${item}`) 
+        return res
+    }
+    
+    let cliente = '';
 
     return (
         <>
@@ -52,7 +62,10 @@ const TableSale = () => {
                                         </td>
 
                                         <td className='px-3 py-2'>
-                                            <span className='ml-2 font-large'>{item.client}</span>
+                                            <span className='ml-2 font-large'>
+                                                {item.client}
+                                                {/* { cliente = getCLient(item.name)} */}
+                                            </span>
                                         </td>
 
                                         <td className='px-3 py-2'>

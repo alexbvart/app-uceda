@@ -12,6 +12,7 @@ import Navigation from './components/Navigation';
 import Employees from './pages/Employees';
 import Workstation from './pages/Workstation';
 import Sale from './pages/Sale';
+import ProductOutlets from './pages/ProductOutlets'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route  exact path='/marca' component={Brand}/>
             <Route  exact path='/empleado' component={Employees}/>           
             <Route  exact path='/puesto' component={Workstation}/>           
+            <Route  exact path='/outlest' component={ProductOutlets}/>           
           </div>
       </Router>
 

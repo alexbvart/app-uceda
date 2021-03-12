@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'
 
-const FormClient = ({refreshGetClient}) => {
+const FormClient = ({ refreshGetClient }) => {
 
     const { register, errors, handleSubmit } = useForm();
 
@@ -17,11 +17,11 @@ const FormClient = ({refreshGetClient}) => {
             dni: data.dni,
             phone: data.phone,
             adress: data.addresss
-        }        
+        }
         const res = await axios.post(`${baseURLClient}`, NewClient);
         console.log(res);
         refreshGetClient();
-        
+
         event.target.reset();
     }
 
@@ -206,5 +206,10 @@ const FormClient = ({refreshGetClient}) => {
             </form>
         </>
     );
+
 }
 export default FormClient;
+
+
+
+

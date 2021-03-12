@@ -3,7 +3,7 @@ import '../styles/header.css';
 const Header = ({children}) => {
     return (
         <>
-            <header className="header">
+            <header className="header p-sticky-0 ">
                 <div className="wrapper">
                     <div className="header-grid">
                         <div>
