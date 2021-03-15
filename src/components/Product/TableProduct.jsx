@@ -39,32 +39,38 @@ const TableProduct = ({ products, refreshGetProducts }) => {
                         <tbody className=''>
                             {
                                 products.map((item) => (
-                                    <tr
+
+                                    (item !== null) 
+                                    ? (
+                                        <tr
                                         key={item._id}
                                         className=""
                                         onDoubleClick={
                                             () => deleteProduct(item._id)
                                         }
                                     >
-                                        <td className='px-6 py-4 '>
+                                        <td className='px-3 py-2 '>
                                             <span className='ml-2 font-large'>{item.name}</span>
                                         </td>
 
-                                        <td className='px-6 py-4'>
+                                        <td className='px-3 py-2'>
                                             <span className='ml-2 font-large'>{item.description}</span>
                                         </td>
 
-                                        <td className='px-6 py-4'>
+                                        <td className='px-3 py-2'>
                                             <span className='ml-2 font-large'>
-                                            S/.{(parseFloat(item.price))%1 ? parseFloat(item.price) : `${parseFloat(item.price)}.00 `}
+                                            S/.{(parseFloat(item.price))%1 ? parseFloat(item.price) : `${parseFloat(item.price)}.00`}
                                             </span>
                                             
                                         </td>
 
-                                        <td className='px-6 py-4'>
+                                        <td className='px-3 py-2'>
                                             <span className='ml-2 font-large'>{item.stock}</span>
                                         </td>
-                                    </tr>
+                                    </tr>)
+
+                                    :console.log(' null')
+                                    
                                 ))
                             }
                         </tbody>

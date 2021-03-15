@@ -4,12 +4,13 @@ import FormProduct from '../components/Product/FormProduct';
 import TableProduct from '../components/Product/TableProduct';
 const Product = () => {
 
-    const baseURL ='http://localhost:5000/productos';
+    const baseURL ='http://localhost:5000/productos/true';
 
     const [products, setProducts] = useState([])
 
     const getProducts = async()=>{
         const res = await axios.get(baseURL);
+        console.log(res.data);
         setProducts(res.data)
     }
 

@@ -1,8 +1,11 @@
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
+
+/* CONTEXT */
 import EmployeeContext from '../../context/Employees/EmployeeContext';
+import WorkstationContext from '../../context/Workstation/WorkstationContext';
 
 
 const FormEmployees = () => {
@@ -12,6 +15,24 @@ const FormEmployees = () => {
     const { EMPLOYEES_API_URL, getEmployees } = useContext(EmployeeContext)
 
 
+    /* manjear los estados de nombre y apellido para crear el email institucional */
+    const [datos, setDatos] = useState({
+        name: '',
+        lastname: ''
+    })
+    const handleInputChange = (event) => {
+        setDatos({
+            ...datos,
+            [event.target.name] : event.target.value
+        })
+    }
+
+    /* inportarce los puestos de trabajo, y pasarlos por el efect para que el inital state cambien de [] a [...] */
+    const {workStation,getWorkstation} = useContext(WorkstationContext)
+    useEffect(() => {
+        getWorkstation()
+    }, [])
+
     const onSubmit = async (data, event) => {
         console.log(data);
 
@@ -19,10 +40,13 @@ const FormEmployees = () => {
             name: data.name,
             lastname: data.lastname,
             dni: data.dni,
-            email: data.email
+            email: data.email,
+            phone: data.phone,
+            birth: data.birth,
+            workstation: data.workstation
         }
         const res = await axios.post(EMPLOYEES_API_URL, NewEmployee);
-        console.log(res);
+        console.log(res); 
         getEmployees();  
         event.target.reset();  
     }
@@ -47,6 +71,7 @@ const FormEmployees = () => {
                             id='name'
                             placeholder='Ingrese nombre'
                             className='input'
+                            onChange={handleInputChange}
                             ref={
                                 register({
                                     required: {
@@ -76,6 +101,7 @@ const FormEmployees = () => {
                             name='lastname'
                             id='lastname'
                             placeholder='Ingrese apellidos'
+                            onChange={handleInputChange}
                             className='input'
                             ref={
                                 register({
@@ -118,8 +144,8 @@ const FormEmployees = () => {
                                         message: 'No más de 8 carácteres!'
                                     },
                                     minLength: {
-                                        value: 8,
-                                        message: 'Mínimo 8 carácteres'
+                                        value: 1,
+                                        message: 'Mínimo 1 carácteres'
                                     }
                                 })
                             }
@@ -130,26 +156,33 @@ const FormEmployees = () => {
                     </div>
 
                     <div className='col-md-3'>
-                        <label forhtml='email'>E-mail</label>
+                        <label forhtml='email'>E-mail corporativo automatico</label>
                         <input
                             type='email'
                             name='email'
                             id='email'
-                            placeholder='Ingrese email'
+                            placeholder='@uceda.com'
                             className='input'
+                            value={
+                                (datos.name && datos.lastname)
+                                ?
+                                    (`${datos.name.replace(/ /g, "").toLowerCase()}${datos.lastname.replace(/ /g, "").toLowerCase()}@uceda.com`)
+                                :
+                                    (`@uceda.com`)
+                            } readOnly
                             ref={
                                 register({
                                     required: {
                                         value: true,
-                                        message: 'email obligatorio'
+                                        message: 'email institucional obligatorio'
                                     },
                                     maxLength: {
-                                        value: 50,
-                                        message: 'No más de 50 carácteres!'
+                                        value: 255,
+                                        message: 'No más de 255 carácteres!'
                                     },
                                     minLength: {
-                                        value: 5,
-                                        message: 'Mínimo 5 carácteres'
+                                        value: 15,
+                                        message: 'Mínimo 15 carácteres'
                                     }
                                 })
                             }
@@ -158,6 +191,78 @@ const FormEmployees = () => {
                             {errors?.email?.message}
                         </span>
                     </div>
+
+                    <div className='col-md-3'>
+                        <label forhtml='phone'>Telefono</label>
+                        <input
+                            type='number'
+                            name='phone'
+                            id='phone'
+                            placeholder='Ingrese su número de telefono'
+                            className='input'
+                            ref={
+                                register({
+                                    required: {
+                                        value: true,
+                                        message: 'telefono obligatorio'
+                                    },
+                                    maxLength: {
+                                        value: 9,
+                                        message: 'No más de 9 carácteres!'
+                                    },
+                                    minLength: {
+                                        value: 1,
+                                        message: 'Mínimo 1 carácteres'
+                                    }
+                                })
+                            }
+                        ></input>
+                        <span className='text-danger text-small d-block mb-2'>
+                            {errors?.phone?.message}
+                        </span>
+                    </div>
+
+
+
+                    <div className='col-md-3'>
+                        <label forhtml='birth'>Fecha de cumpleaños</label>
+                        <input
+                            type='date'
+                            name='birth'
+                            id='birth'
+                            placeholder='Ingrese su fecha de nacimiento'
+                            className='input'
+                            ref={
+                                register({
+                                    required: {
+                                        value: true,
+                                        message: 'telefono obligatorio'
+                                    },
+                                })
+                            }
+                        ></input>
+                        <span className='text-danger text-small d-block mb-2'>
+                            {errors?.birth?.message}
+                        </span>
+                    </div>
+
+                    
+                        <div className='col-md-3'>
+                            <label forhtml='workstation'>Puesto de trabajo asignado</label>
+                            <select
+                                name="workstation"
+                                ref={register} 
+                                className="mt-1 block w-full py-3 px-4 bg--cardGray rounded-md shadow-sm focus:outline-none ">
+                                    <option> Seleciona un puesto </option>
+                                {workStation.map((item) => (
+                                    <option key={item._id} value={item._id}>{item.name} </option>
+                                ))
+                                } 
+                            </select>
+                            <span className='text-danger text-small d-block mb-2'>
+                                {errors?.workstation?.message}
+                            </span>
+                        </div>
 
                     <div className="buttons mt-8">
                         <button className="button"

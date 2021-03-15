@@ -24,14 +24,17 @@ const TableEmployees = () => {
                         <thead className='text-xs uppercase font-medium'>
                             <tr>
 
-                                <th scope='col' className='px-3 py-2 text-left tracking-wider'>
+                                <th scope='col' className='px-2 py-2 text-left tracking-wider'>
                                     Nombre y Apellidos
                                 </th>
-                                <th scope='col' className='px-3 py-2 text-left tracking-wider'>
+                                <th scope='col' className='px-2 py-2 text-left tracking-wider'>
                                     DNI
                                 </th>
-                                <th scope='col' className='px-3 py-3 text-left tracking-wider'>
+                                <th scope='col' className='px-2 py-2 text-left tracking-wider'>
                                     E-mail
+                                </th>
+                                <th scope='col' className='px-2 py-2 text-left tracking-wider'>
+                                    Puesto de trabajo
                                 </th>
                                 {/* <th scope='col' className='px-3 py-3 text-left tracking-wider'>
                                     Cumpleaños
@@ -64,6 +67,9 @@ const TableEmployees = () => {
 
                                         <td className='px-6 py-4'>
                                             <span className='ml-2 font-large'>{item.email}</span>
+                                        </td>
+                                        <td className='px-6 py-4'>
+                                            <span className='ml-2 font-large'>{item.workstation}</span>
                                         </td>
 
                                         {/* <td className='px-6 py-4'>

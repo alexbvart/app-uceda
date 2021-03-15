@@ -7,6 +7,8 @@ import TableEmployees from '../components/Employees/TableEmployees';
 
 /* CONTEXT */
 import EmployeeState from "../context/Employees/EmployeeState";
+import WorkstationState from '../context/Workstation/WorkstationState';
+
 
 const Employees = () => {
 
@@ -15,7 +17,10 @@ const Employees = () => {
     return (
         <div className="main-full">
             <EmployeeState >
-                <FormEmployees />
+                <WorkstationState>
+                    <FormEmployees />
+                </WorkstationState>
+
                 <TableEmployees />
                 {/* <FormEmployees  refreshGetEmployees={getEmployees} />
                     <TableEmployees refreshGetEmployees={getEmployees} employees={employees} /> */}

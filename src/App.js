@@ -1,7 +1,6 @@
 import './App.css';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from './components/Header'
-import Dark from './components/Dark'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import Category from './pages/Category'
@@ -13,30 +12,33 @@ import Employees from './pages/Employees';
 import Workstation from './pages/Workstation';
 import Sale from './pages/Sale';
 import ProductOutlets from './pages/ProductOutlets'
+import Layout from './pages/Layout';
+
+/* CONTEXT */
+import DataSessionState from './context/DataSesion/DataSessionState';
 
 
 function App() {
   return (
     <>
-      <Router >    
-        <Header >
-          <Dark />
-        </Header>
-          <div className="wrapper">
-            <Route exact path='/' component={Login}/>
-          </div>
-          <div className="grid-wrapper">
-            <Navigation />
-            <Route exact path='/home' component={Dashboard}/>
-            <Route exact path='/venta' component={Sale}/>
-            <Route exact path='/producto' component={Product}/>
-            <Route exact path='/cliente' component={Client}/>
-            <Route exact path='/categoria' component={Category}/>
-            <Route  exact path='/marca' component={Brand}/>
-            <Route  exact path='/empleado' component={Employees}/>           
-            <Route  exact path='/puesto' component={Workstation}/>           
-            <Route  exact path='/outlest' component={ProductOutlets}/>           
-          </div>
+      <Router >
+        <DataSessionState>
+          <Layout>
+            <Switch>
+              <Route exact path='/' component={Login} />
+
+              <Route exact path='/home' component={Dashboard} />
+              <Route exact path='/venta' component={Sale} />
+              <Route exact path='/producto' component={Product} />
+              <Route exact path='/cliente' component={Client} />
+              <Route exact path='/categoria' component={Category} />
+              <Route exact path='/marca' component={Brand} />
+              <Route exact path='/empleado' component={Employees} />
+              <Route exact path='/puesto' component={Workstation} />
+              <Route exact path='/outlest' component={ProductOutlets} />
+            </Switch>
+          </Layout>
+        </DataSessionState>
       </Router>
 
 

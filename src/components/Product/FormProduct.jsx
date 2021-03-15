@@ -79,15 +79,17 @@ const FormProduct = ({ refreshGetProducts }) => {
 
     const onSubmitForm = async (e) =>{
         e.preventDefault();
-        console.log('_n:', name.name,' _d: ',description.description,'_p', price.price, '_c: ',categorySelected.categorySelected, ' b: ',brandSelected.brandSelected);
+        /* console.log('_n:', name.name,' _d: ',description.description,'_p', price.price, '_c: ',categorySelected.categorySelected, ' b: ',brandSelected.brandSelected); */
         const newProduct ={
             name: name.name,
             description: description.description,
-            price: price.price,
+            price: (parseFloat(price.price))%1 ? parseFloat(price.price) : `${parseFloat(price.price)}.00`,
+            status: true,
             stock: stock.stock,
             categorySelected: categorySelected.categorySelected,
             brandSelected: brandSelected.brandSelected
         }
+        console.log({newProduct});
         const res = await axios.post(baseURLproducts, newProduct )
         console.log(res);
         
