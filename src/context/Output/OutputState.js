@@ -41,16 +41,16 @@ const OutputState = ({children}) => {
 
 
     const createOutput = async (newOutput) => {
-        const res = await axios.post(PRODUCT_API_URL, newOutput )
+        const res = await axios.post(OUTPUT_API_URL, newOutput )
         console.log(res)
     }
 
     const updateOutput   = async (id) => {
-        await axios.put(`${PRODUCT_API_URL}/${id}`)
+        await axios.put(`${OUTPUT_API_URL}/${id}`)
     }
 
     const deleteOutput= async (id) => {
-        await axios.delete(`${PRODUCT_API_URL}/${id}`)
+        await axios.delete(`${OUTPUT_API_URL}/${id}`)
     }
 
 
@@ -58,7 +58,7 @@ const OutputState = ({children}) => {
         <>
             <OutputContext.Provider 
                 value={{
-                    PRODUCT_API_URL,
+                    OUTPUT_API_URL,
                     output,              setOutput,              getOutput,
                     loss,                setLoss,                getLoss,
                     stolen,              setStolen,              getStolen,

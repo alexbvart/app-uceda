@@ -18,6 +18,7 @@ const FormClient = ({ refreshGetClient }) => {
             phone: data.phone,
             adress: data.addresss
         }
+        /* createClient(NewClient) */
         const res = await axios.post(`${baseURLClient}`, NewClient);
         console.log(res);
         refreshGetClient();
