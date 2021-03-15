@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 
-const TableProduct = ({ products, refreshGetProducts }) => {
+/* CONTEX */
+import ProductContext from '../../context/Product/ProductContext';
+
+const TableProduct = (/* { products, refreshGetProducts } */) => {
+    const {productsTrue,getProductsTrue} = useContext(ProductContext)
+
+    useEffect(() => {
+        getProductsTrue()
+        console.log("pt:",productsTrue);
+    }, [])
 
     const baseURL = 'http://localhost:5000/productos';
 
     const deleteProduct = async (id) => {
         await axios.delete(`${baseURL}/${id}`)
-        refreshGetProducts();
+        getProductsTrue();
         console.log(`${baseURL}/${id}`);
     }
 
@@ -38,7 +47,7 @@ const TableProduct = ({ products, refreshGetProducts }) => {
                         </thead>
                         <tbody className=''>
                             {
-                                products.map((item) => (
+                                productsTrue.map((item) => (
 
                                     (item !== null) 
                                     ? (

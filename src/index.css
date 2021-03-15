@@ -23,7 +23,7 @@ body {
     --instagram-2: hsl(329, 70%, 58%);
     --youTube: hsl(348, 97%, 39%);
     --gray: #5f616d;
-    --cardGray: #f0f3fa;
+    --cardGray: #e3eafa;
     --lightGray: #f8f9fe;
     --cardTitle: #6f717e;
     --baseBackground: white;
@@ -142,7 +142,7 @@ h2 {
   
   .is-light-mode {
     --gray: #5f616d;
-    --cardGray: #f0f3fa;
+    --cardGray: #e3eafa;
     --lightGray: #f8f9fe;
     --cardTitle: #6f717e;
     --baseBackground: white;

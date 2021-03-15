@@ -7,9 +7,12 @@
   padding: 1em 0;
 }
   .header-total {
-    color: var(--gray);
+    /* color: var(--gray); */
     margin: .5em 0;
     font-weight: 600;
     border-bottom: 1px solid var(--gray);
     padding-bottom: 1.5em;
+  }
+  .btn-log{
+
   }

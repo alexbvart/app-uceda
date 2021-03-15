@@ -90,8 +90,9 @@ const FormProduct = ({ refreshGetProducts }) => {
             brandSelected: brandSelected.brandSelected
         }
         console.log({newProduct});
-        const res = await axios.post(baseURLproducts, newProduct )
-        console.log(res);
+        /* const res = await axios.post(baseURLproducts, newProduct ) */
+        /* createProduct(newProduct) */
+;
         
         refreshGetProducts()
     }

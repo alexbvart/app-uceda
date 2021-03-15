@@ -24,13 +24,13 @@ const Header = ({ children }) => {
                         <div>
                             <h1>Electronica Uceda</h1>
                             <p className="header-total">
-                                {
+{/*                                 {
                                     (data)
                                         ? (`${data.employee.name} ${data.employee.lastname} | ${data.workstation.name}`)
                                         :('')
-                            }
+                            } */}
                             <button 
-                                className="bg-red-600 p-1 rounded-b-none" 
+                                className="bg-red-600 p-1 rounded btn-log" 
                                 onClick=""
                                 onClick={(e) => {
                                     logout(e)
