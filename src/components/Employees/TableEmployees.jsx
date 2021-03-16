@@ -57,18 +57,18 @@ const TableEmployees = () => {
                                             () => deleteEmployees(item._id)
                                         }
                                     >
-                                        <td className='px-6 py-4 '>
+                                        <td className='px-2 py-4 '>
                                             <span className='ml-2 font-large'>{item.name} {item.lastname}</span>
                                         </td>
 
-                                        <td className='px-6 py-4'>
+                                        <td className='px-2 py-4'>
                                             <span className='ml-2 font-large'>{item.dni}</span>
                                         </td>
 
-                                        <td className='px-6 py-4'>
+                                        <td className='px-2 py-4'>
                                             <span className='ml-2 font-large'>{item.email}</span>
                                         </td>
-                                        <td className='px-6 py-4'>
+                                        <td className='px-2 py-4'>
                                             <span className='ml-2 font-large'>{item.workstation}</span>
                                         </td>
 

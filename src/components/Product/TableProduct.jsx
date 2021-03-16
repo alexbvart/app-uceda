@@ -9,7 +9,7 @@ const TableProduct = (/* { products, refreshGetProducts } */) => {
 
     useEffect(() => {
         getProductsTrue()
-        console.log("pt:",productsTrue);
+        console.log("ptrue:",productsTrue);
     }, [])
 
     const baseURL = 'http://localhost:5000/productos';
@@ -27,20 +27,20 @@ const TableProduct = (/* { products, refreshGetProducts } */) => {
                 <h1 className='text-lg font-medium'>Productos registrados</h1>
                 <div className="flex flex-col mt-6">
 
-                    <table className='min-w-full text-sm text-gray-400'>
+                    <table className='max-w-full text-sm text-gray-400 mx-8'>
                         <thead className='text-xs uppercase font-medium'>
                             <tr>
 
-                                <th scope='col' className='px-6 py-3 text-left tracking-wider'>
+                                <th scope='col' className='px-2 py-3 text-left tracking-wider'>
                                     Nombre
                                 </th>
-                                <th scope='col' className='px-6 py-3 text-left tracking-wider'>
+                                <th scope='col' className='px-2 py-3 text-left w-3/5'>
                                     Descripcion
                                 </th>
-                                <th scope='col' className='px-6 py-3 text-left tracking-wider'>
+                                <th scope='col' className='px-2 py-3 text-left tracking-wider'>
                                     Precio
                                 </th>
-                                <th scope='col' className='px-6 py-3 text-left tracking-wider'>
+                                <th scope='col' className='px-2 py-3 text-left tracking-wider'>
                                     Stock
                                 </th>
                             </tr>

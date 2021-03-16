@@ -26,8 +26,8 @@ const ProductState = ({children}) => {
 
     const getProductsTrue = async()=>{
         const res = await axios.get(`${PRODUCT_API_URL}/true`);
-        console.log(res.data);
-        res.data.filter( notnull => notnull!==null);
+        const Producttrue = res.data.filter( notnull => notnull!==null);
+        setProductsTrue(Producttrue)
     }
 
     const getProductsFalse = async()=>{

@@ -2,7 +2,8 @@
 .card-form {
     border-radius: 20px;
     width: 100%;
-    max-width: 450px;
+    /* max-width: 450px; */
+
 }
 .top {
     background-color: #eee;

@@ -1,23 +1,28 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useHistory } from "react-router-dom";
 import ButtonSubmit from '../utils/ButtonSubmit';
+
+/* CONTEX */
+import DataSessionContex from '../context/DataSesion/DataSessionContex';
 
 
 axios.interceptors.request.use(
     async config => {
-        const token = localStorage.getItem('token');;
+        const token = localStorage.getItem('token');
         console.log(token);
-        if (token) {
 
+/*         const roles = localStorage.getItem("roles");
+        console.log('roles: ', roles); */
+
+        if (token) {
             config.headers = {
                 'Access-Control-Allow-Headers': 'x-access-token',
                 'X-WP-Nonce': 'my-wp-nonce-here',
                 'x-access-token': token,
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             }
         }
-
         return config;
     },
     error => {
@@ -32,7 +37,7 @@ const Login = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-
+    const {setEmployee,setRole} = useContext(DataSessionContex)
     const storedJwt = localStorage.getItem('token');
     const [jwt, setJwt] = useState(storedJwt || null);
 
@@ -61,14 +66,16 @@ const Login = () => {
             password: password.password
         })
         console.log('data: ', res.data);
-        setJWT(res.data)
+        setLocalStorage(res.data)
         history.push("/venta");
     }
 
-    const setJWT = async (dataToken) => {
-        /*  const { data } = await axios.get(`${apiUrl}/jwt`); */
+    const setLocalStorage = async (dataToken) => {
         localStorage.setItem('data', JSON.stringify(dataToken));
-
+        localStorage.setItem('roles', JSON.stringify(dataToken.roles));
+        localStorage.setItem('employee', JSON.stringify(dataToken.employee));
+        setEmployee(dataToken.employee)
+        setRole(dataToken.roles)
 
         localStorage.setItem('token', dataToken.token);
         setJwt(dataToken.token);

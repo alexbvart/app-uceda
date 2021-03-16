@@ -1,10 +1,35 @@
-.bg-active{
+.navigation-wrapper{
+    position: sticky;
+    top:168px;
+    height: 34rem;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.navigation{
+
+}
+.navigation .bg-active{
     background-color: var(--action);
 }
 
-.a-link-nav:focus,
-.a-link-nav:active
+.navigation .a-link-nav:focus,
+.navigation .a-link-nav:active
 {
     background-color: var(--action);
+    color: #1d2029;
 }
 
+.navigation-wrapper::-webkit-scrollbar{
+  width: 4px;
+  height: 6px;
+
+  background: var(--text-color);
+
+}
+
+.navigation-wrapper::-webkit-scrollbar-thumb{
+  background-color: var(--baseColor);
+  background: var(--cardGray);/* ligth+ */
+  border-radius: 4px;
+}
