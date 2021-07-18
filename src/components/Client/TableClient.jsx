@@ -15,7 +15,7 @@ const TableClient = ({ client, refreshGetClient }) => {
         <>
             <div className='flex flex-col items-center justify-center'>
 
-                <h1 className='text-lg font-medium'>Cliente registrados</h1>
+                <h1 className='text-lg font-medium'>Clientes registrados</h1>
                 <div className='flex flex-col mt-6'>
 
                     <table className='min-w-full text-sm text-gray-400'>
@@ -23,16 +23,13 @@ const TableClient = ({ client, refreshGetClient }) => {
                             <tr>
 
                                 <th scope='col' className='px-6 py-3 text-left tracking-wider'>
-                                    Nombre
-                                </th>
-                                <th scope='col' className='px-6 py-3 text-left tracking-wider'>
-                                    Apellido
-                                </th>
-                                <th scope='col' className='px-6 py-3 text-left tracking-wider'>
                                     DNI
                                 </th>
                                 <th scope='col' className='px-6 py-3 text-left tracking-wider'>
-                                    Número de telefono
+                                    Nombres y Apellidos
+                                </th>
+                                <th scope='col' className='px-6 py-3 text-left tracking-wider'>
+                                    Telefono
                                 </th>
                             </tr>
                         </thead>
@@ -46,17 +43,22 @@ const TableClient = ({ client, refreshGetClient }) => {
                                             () => deleteClient(item._id)
                                         }
                                     >
-                                        <td className='px-6 py-4 '>
-                                            <span className='ml-2 font-large'>{item.name}</span>
-                                        </td>
-
-                                        <td className='px-6 py-4'>
-                                            <span className='ml-2 font-large'>{item.lastname}</span>
-                                        </td>
-
                                         <td className='px-6 py-4'>
                                             <span className='ml-2 font-large'>{item.dni}</span>
                                         </td>
+                                        
+                                        <td className='px-6 py-4 '>
+                                            <span className='ml-2 font-large'>{item.full_name}</span>
+                                        </td>
+                                        {/* <td className='px-6 py-4 '>
+                                            <span className='ml-2 font-large'>{item.name} {item.lastname}</span>
+                                        </td> */}
+
+                                        <td className='px-6 py-4'>
+                                            <span className='ml-2 font-large'>{item.telephone}</span>
+                                        </td>
+
+                                        
 
                                         <td className='px-6 py-4'>
                                             <span className='ml-2 font-large'>{item.phone}</span>

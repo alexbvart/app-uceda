@@ -4,7 +4,7 @@ import FormClient from '../components/Client/FormClient';
 import TableClient from '../components/Client/TableClient';
 const Client = () => {
 
-    const baseURLcliente ='http://localhost:5000/cliente';
+    const baseURLcliente =`${process.env.REACT_APP_API}/clientes`;
 
     const [client, setClient] = useState([])
 

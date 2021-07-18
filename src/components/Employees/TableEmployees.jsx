@@ -8,9 +8,6 @@ const TableEmployees = () => {
 
     useEffect(() => {
         getEmployees()
-        /* return () => {
-            cleanup
-        } */
     }, [])
 
     return (

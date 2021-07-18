@@ -22,8 +22,6 @@ const Employees = () => {
                 </WorkstationState>
 
                 <TableEmployees />
-                {/* <FormEmployees  refreshGetEmployees={getEmployees} />
-                    <TableEmployees refreshGetEmployees={getEmployees} employees={employees} /> */}
             </EmployeeState>
         </div>
     );

@@ -1,16 +1,14 @@
-import axios from 'axios';
-import React, {useState} from 'react';
-const TableCategory = ({category,refreshGetCategory}) => {
 
+import React, {useContext, useEffect} from 'react';
+import CategoryContext from '../../context/Category/CategoryContext';
+const TableCategory = () => {
+
+    const { category, getCategory , deleteCategory} = useContext(CategoryContext)
+
+    useEffect(() => {
+        getCategory()
+    }, [])
     
-    const baseURLcategory = 'http://localhost:5000/categoria';
-
-    const deleteCategory = async (id) => {
-        await axios.delete(`${baseURLcategory}/${id}`)
-        refreshGetCategory();
-        console.log(`${baseURLcategory}/${id}`);
-    }
-
     return ( 
         <>
             <div className="flex flex-col items-center justify-center ">

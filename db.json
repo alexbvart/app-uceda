@@ -212,6 +212,36 @@
         }
     ],
     "productos": [],
+    "categorias":[
+        {"id": 1, "name": "Raspberry Pi Pico"},
+        {"id": 2, "name": "Arduino"},
+        {"id": 3, "name": "Qwiic"},
+        {"id": 4, "name": "MicroMod"},
+        {"id": 5, "name": "Sensores"},
+        {"id": 6, "name": "Hilo Conductivo"}
+    ],
+    "subcategorias":[
+        {"id": 1, "categoriasId": 2, "categoria":"Arduino","name": "Raspberry Pi Pico"},
+        {"id": 2, "categoriasId": 2, "categoria":"Arduino","name": "Placas Arduino"},
+        {"id": 3, "categoriasId": 2, "categoria":"Arduino","name": "Kits Arduino"},
+        {"id": 4, "categoriasId": 2, "categoria":"Arduino","name": "Shields Arduino"},
+        {"id": 5, "categoriasId": 2, "categoria":"Arduino","name": "Módulos"},
+        {"id": 6, "categoriasId": 5, "categoria":"Sensores","name": "Distancia / Proximidad"},
+        {"id": 7, "categoriasId": 5, "categoria":"Sensores","name": "Acelerómetro / IMU"},
+        {"id": 8, "categoriasId": 5, "categoria":"Sensores","name": "Temperatura / Humedad"},
+        {"id": 9, "categoriasId": 5, "categoria":"Sensores","name": "Fuerza"},
+        {"id": 10, "categoriasId": 5, "categoria":"Sensores","name": "Gas"},
+        {"id": 11, "categoriasId": 5, "categoria":"Sensores","name": "Inclinación / Vibración"},
+        {"id": 12, "categoriasId": 5, "categoria":"Sensores","name": "Otros"}
+    ],
+    "marcas":[
+        {"id": 1, "name": "SEEEDSTUDIO"},
+        {"id": 2, "name": "ADAFRUIT"},
+        {"id": 3, "name": "NEOPIXEL"},
+        {"id": 4, "name": "Pololu"},
+        {"id": 5, "name": "Seeedstudio"}
+    ],
+    
     "entradas": [],
     "proveedores": [
         {

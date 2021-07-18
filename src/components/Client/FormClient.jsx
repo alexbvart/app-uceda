@@ -39,6 +39,8 @@ const FormClient = ({ refreshGetClient }) => {
                     <div className="info">
                         Registra un nuevo cliente en la tienda.
                     </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-4">
+
                     <div className='col-md-3'>
                         <label forhtml='name'>Nombre</label>
                         <input
@@ -203,6 +205,7 @@ const FormClient = ({ refreshGetClient }) => {
                             Nuevo Cliente
                         </button>
                     </div>
+                </div>
                 </div>
             </form>
         </>
