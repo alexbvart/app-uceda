@@ -14,6 +14,7 @@ import Sale from './pages/Sale';
 import ProductOutlets from './pages/ProductOutlets'
 import Layout from './pages/Layout';
 import Provider from './pages/Provider';
+import SubCategory from './pages/SubCategory';
 
 /* CONTEXT */
 import DataSessionState from './context/DataSesion/DataSessionState';
@@ -32,6 +33,7 @@ function App() {
               <Route exact path='/venta' component={Sale} />
               <Route exact path='/producto' component={Product} />
               <Route exact path='/categoria' component={Category} />
+              <Route exact path='/subcategoria' component={SubCategory} />
               <Route exact path='/marca' component={Brand} />
               <Route exact path='/cliente' component={Client} />
               <Route exact path='/puesto' component={Workstation} />

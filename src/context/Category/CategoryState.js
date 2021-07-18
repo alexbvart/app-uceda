@@ -33,6 +33,32 @@ const CategoryState = ({children}) => {
         getCategory();
     }
 
+    const  SUB_CATEGORY_API_URL =`${process.env.REACT_APP_API}/subcategorias`;
+
+    const [subCategory, setSubCategory] = useState([])
+
+    const getSubCategory = async()=>{
+        const res = await axios.get(`${SUB_CATEGORY_API_URL}`);
+        console.log(res.data);
+        setSubCategory(res.data) 
+    }
+
+    const createSubCategory = async (newSubCategory) => {
+        const res = await axios.post(SUB_CATEGORY_API_URL, newSubCategory )
+        console.log(res)
+        getSubCategory();
+    }
+
+    const updateSubCategory = async (id) => {
+        await axios.put(`${SUB_CATEGORY_API_URL}/${id}`)
+        getSubCategory();
+    }
+
+    const deleteSubCategory = async (id) => {
+        await axios.delete(`${SUB_CATEGORY_API_URL}/${id}`)
+        getSubCategory();
+    }
+
 
     return ( 
         <>
@@ -42,7 +68,12 @@ const CategoryState = ({children}) => {
                     category,       setCategory,       getCategory,
                     createCategory,
                     updateCategory,
-                    deleteCategory
+                    deleteCategory,
+                    SUB_CATEGORY_API_URL,
+                    subCategory,       setSubCategory,       getSubCategory,
+                    createSubCategory,
+                    updateSubCategory,
+                    deleteSubCategory
                 }}
         >
             {children}

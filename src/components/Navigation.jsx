@@ -51,11 +51,18 @@ const Navigation = () => {
                                     to="/producto"
                                     className="a-link-nav flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
                                     <span className="leading-none">Producto</span>
-                                </Link><Link
+                                </Link>
+                                <Link
                                     to="categoria"
                                     className="a-link-nav flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
                                     <span className="leading-none">Categoria</span>
-                                </Link><Link
+                                </Link>
+                                <Link
+                                    to="subcategoria"
+                                    className="a-link-nav flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
+                                    <span className="leading-none">Sub categoria</span>
+                                </Link>
+                                <Link
                                     to="/marca"
                                     className="a-link-nav flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
                                     <span className="leading-none">Marca</span>
