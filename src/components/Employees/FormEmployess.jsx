@@ -64,7 +64,7 @@ const FormEmployees = () => {
                     </div>
 
                     <div className='col-md-3'>
-                        <label forhtml='name'>name</label>
+                        <label forhtml='name'>Nombre</label>
                         <input
                             type='text'
                             name='name'

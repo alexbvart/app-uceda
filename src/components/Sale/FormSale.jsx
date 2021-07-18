@@ -1,11 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import SaleContext from '../../context/Sale/SaleContext';
+import DataSessionContex from '../../context/DataSesion/DataSessionContex';
 
 const FormSale = () => {
 
 
     const { SALE_API_URL, detailRender, getSales, detail,setDetail } = useContext(SaleContext)
+    const {user} = useContext(DataSessionContex)
+
 
     const [client, setClient] = useState([])
 
@@ -84,6 +87,7 @@ const FormSale = () => {
             date: Date(date.date),
             total: totalPost,
             client: clientSelected.clientSelected,
+            user: user,
             details: detail
         }
         const res = await axios.post(SALE_API_URL, NewSale);

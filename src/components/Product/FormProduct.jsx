@@ -116,7 +116,7 @@ const FormProduct = ({ refreshGetProducts }) => {
                         Registra el nombre del nuevo productos en la tienda.
                     </div>
 
-                    <div className="input-wrapper">
+                    <div className='col-md-3'>
                         <label htmlFor="name">Nombre</label>
                         <input
                             type="text"
@@ -207,7 +207,7 @@ const FormProduct = ({ refreshGetProducts }) => {
                             type="submit"
                             className="button button-primary"
                         >
-                            Do it!
+                            Nuevo Producto
                         </button>
                     </div>
                 </div>

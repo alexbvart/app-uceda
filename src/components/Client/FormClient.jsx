@@ -200,7 +200,7 @@ const FormClient = ({ refreshGetClient }) => {
                             className="button button-primary"
                             name='enviar'
                         >
-                            Do it!
+                            Nuevo Cliente
                         </button>
                     </div>
                 </div>

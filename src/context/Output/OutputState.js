@@ -5,7 +5,7 @@ import OutputContext from './OutputContext';
 
 const OutputState = ({children}) => {
 
-    const OUTPUT_API_URL ='http://localhost:5000/salidas';
+    const OUTPUT_API_URL =`${process.env.REACT_APP_API}/salidas`;
 
     const [output, setOutput]               = useState([])
     const [loss, setLoss]                   = useState([])

@@ -11,11 +11,12 @@ const FormDetailSale = () => {
     const PRODUCT_API_URL = 'http://localhost:5000/productos';
 
     const getProducts = async () => {
-        const res = await axios.get(PRODUCT_API_URL);
-        console.log(res.data);
-        setProducts(res.data)
+        const res = await axios.get(`${PRODUCT_API_URL}/true`);
+        const Producttrue = res.data.filter( notnull => notnull!==null);
+        console.log(Producttrue);
+        setProducts(Producttrue)
         setProductSelected({
-            productSelected: res.data[0]._id
+            productSelected: Producttrue[0]._id
         })
     }
 

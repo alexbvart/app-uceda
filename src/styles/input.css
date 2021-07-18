@@ -21,3 +21,7 @@
 .input-wrapper{
     margin: .8rem 0;
 }
+
+select{
+    height: 50px;
+}

@@ -6,7 +6,7 @@ import axios from 'axios';
 const EmployeeState = ({children}) => {
 
 
-    const EMPLOYEES_API_URL ='http://localhost:5000/empleado';
+    const EMPLOYEES_API_URL =`${process.env.REACT_APP_API}/empleado`;
 
     const initialState = {
         employees: []

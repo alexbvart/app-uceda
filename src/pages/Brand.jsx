@@ -24,7 +24,10 @@ const Brand = () => {
     return ( 
         <div className="main">
             <FormBrand  refreshGetBrands={getBrands}/>
-            <TableBrand  brands={brands} refreshGetBrands={getBrands} />
+            {
+                brands &&
+                <TableBrand  brands={brands} refreshGetBrands={getBrands} />
+            }
         </div>
     );
 }

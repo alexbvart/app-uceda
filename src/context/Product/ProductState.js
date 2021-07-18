@@ -5,7 +5,8 @@ import ProductContext from './ProductContext';
 
 const ProductState = ({children}) => {
 
-    const PRODUCT_API_URL ='http://localhost:5000/productos';
+    
+    const PRODUCT_API_URL =`${process.env.REACT_APP_API}/productos`;
 
     const [oneProduct, setOneProduct] = useState({})
     const [productsAll, setProductsAll] = useState([])

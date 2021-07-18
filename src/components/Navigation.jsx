@@ -9,7 +9,7 @@ import DataSessionContex from '../context/DataSesion/DataSessionContex';
 import DataSessionState from '../context/DataSesion/DataSessionState';
 const Navigation = () => {
 
-    const { data } = useContext(DataSessionContex)
+    const { role } = useContext(DataSessionContex)
 
     return (
         <div className="navigation-wrapper">
@@ -18,11 +18,11 @@ const Navigation = () => {
 
                 <DataSessionState>
 
-                    {/* {
-                        (data.roles[0].name == 'Ventas' || data.roles[0].name == 'Administrador')
+                    {
+                        (role[0].name == 'Ventas' || role[0].name == 'Administrador')
                             ?
 
-                            (<> */}
+                            (<>
                                 <label className="my-4">Operaciones</label>
                                 <Link
                                     to="venta"
@@ -71,11 +71,11 @@ const Navigation = () => {
                                     <span className="leading-none">Proveedor</span>
                                 </Link>
 
-                    {/*         </>)
+                            </>)
                             : (console.log('no ventas'))}
 
-                    {(data.roles[0].name == 'RR.HH' || data.roles[0].name == 'Administrador')
-                        ? (<> */}
+                    {(role[0].name == 'RR.HH' || role[0].name == 'Administrador' && role[0].name != 'Ventas')
+                        ? (<>
                             <label className="my-4 pr-2"> Gestión de RR.HH</label>
                             <Link
                                 to="/empleado"
@@ -87,9 +87,9 @@ const Navigation = () => {
                                 className="a-link-nav flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
                                 <span className="leading-none">Puesto </span>
                             </Link>
-{/*                         </>)
+                        </>)
                         : (console.log('no "RR.HH"'))}
- */}
+
                 </DataSessionState>
             </div>
 

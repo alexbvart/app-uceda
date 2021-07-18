@@ -4,14 +4,14 @@ import SaleContext from './SaleContext';
 
 const SaleState = ({children}) => {
 
-    const SALE_API_URL ='http://localhost:5000/venta';
+    const SALE_API_URL =`${process.env.REACT_APP_API}/venta`;
 
     const [sales, setSales] = useState([])
 
     const getSales = async()=>{
         const res = await axios.get(SALE_API_URL);
         console.log(res.data);
-        setSales(res.data.sale) 
+        setSales(res.data) 
         /* setSales(res.data.sale)  */
     }
 

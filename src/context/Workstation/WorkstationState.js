@@ -4,7 +4,7 @@ import WorkstationContext from './WorkstationContext'
 
 const WorkstationState = ({children}) => {
 
-    const WORKSTATION_API_URL ='http://localhost:5000/puesto';
+    const WORKSTATION_API_URL =`${process.env.REACT_APP_API}/puestos`;
     const [workStation, setWorkStation] = useState([])
 
     /*const storedJwt = localStorage.getItem('token');

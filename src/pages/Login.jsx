@@ -37,7 +37,7 @@ const Login = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const {setEmployee,setRole} = useContext(DataSessionContex)
+    const {setEmployee,setRole, setUser} = useContext(DataSessionContex)
     const storedJwt = localStorage.getItem('token');
     const [jwt, setJwt] = useState(storedJwt || null);
 
@@ -71,14 +71,18 @@ const Login = () => {
     }
 
     const setLocalStorage = async (dataToken) => {
+        
         localStorage.setItem('data', JSON.stringify(dataToken));
         localStorage.setItem('roles', JSON.stringify(dataToken.roles));
         localStorage.setItem('employee', JSON.stringify(dataToken.employee));
+        localStorage.setItem('user', JSON.stringify(dataToken.user_id));
+        localStorage.setItem('token', dataToken.token);
+
         setEmployee(dataToken.employee)
         setRole(dataToken.roles)
-
-        localStorage.setItem('token', dataToken.token);
+        setUser(dataToken.user)
         setJwt(dataToken.token);
+
         console.log('aun no nfallo');
     };
 

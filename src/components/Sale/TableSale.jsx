@@ -1,8 +1,11 @@
 import axios from 'axios';
 import React, { useContext, useEffect } from 'react';
 import SaleContext from "../../context/Sale/SaleContext";
+import dateToSpanish from '../../utils/dateToSpanish';
 
 const TableSale = () => {
+
+/*     dateToSpanish("Thu Mar 18 2021 11:18:23 GMT-0500 (Peru Standard Time)") */
 
     const { sales, getSales, deleteSale } = useContext(SaleContext)
     useEffect(() => {
@@ -58,7 +61,7 @@ const TableSale = () => {
                                         }
                                     >
                                         <td className='px-3 py-2 '>
-                                            <span className='ml-2 font-large'>{item.date}</span>
+                                            <span className='ml-2 font-large'>{dateToSpanish(item.date)}</span>
                                         </td>
 
                                         <td className='px-3 py-2'>

@@ -4,7 +4,7 @@ import ClientContext from './ClientContext';
 
 const ClientState = ({children}) => {
 
-    const CLIENT_API_URL ='http://localhost:5000/cliente';
+    const CLIENT_API_URL =`${process.env.REACT_APP_API}/cliente`;
 
     const [client, setClient] = useState([])
     
