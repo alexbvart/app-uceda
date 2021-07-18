@@ -2,12 +2,12 @@ import axios from 'axios';
 import React, {useState} from 'react';
 
 /* CONTEX */
-import ProvideerContext from './ProvideerContext';
+import ProviderContext from './ProviderContext';
 
 
-const ProvideerState = ({children}) => {
+const ProviderState = ({children}) => {
 
-    const  PROVIDER_API_URL =`${process.env.REACT_APP_API}/proveedor`;
+    const  PROVIDER_API_URL =`${process.env.REACT_APP_API}/proveedores`;
 
     const [provider, setProvider] = useState([])
 
@@ -36,7 +36,7 @@ const ProvideerState = ({children}) => {
 
     return ( 
         <>
-            <ProvideerContext.Provider 
+            <ProviderContext.Provider 
                 value={{
                     PROVIDER_API_URL,
                     provider,       setProvider,       getProvider,
@@ -46,8 +46,8 @@ const ProvideerState = ({children}) => {
                 }}
         >
             {children}
-        </ProvideerContext.Provider>
+        </ProviderContext.Provider>
         </>
     );
 }
-export default ProvideerState;
+export default ProviderState;

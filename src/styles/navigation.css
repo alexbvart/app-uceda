@@ -1,7 +1,7 @@
 .navigation-wrapper{
     position: sticky;
     top:168px;
-    height: 34rem;
+    height: calc(100vh - 170px);
     box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;

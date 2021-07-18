@@ -62,6 +62,7 @@ const FormEmployees = () => {
                     <div className="info mb-4">
                         Es bueno contar con alguien mas en Electrnica Uceda, ingrese sus datos.
                     </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-4">
 
                     <div className='col-md-3'>
                         <label forhtml='name'>Nombre</label>
@@ -277,6 +278,8 @@ const FormEmployees = () => {
                             Do it!
                         </button>
                     </div>
+                    </div>
+
             </form>
         </>
     );

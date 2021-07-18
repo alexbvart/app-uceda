@@ -31,7 +31,14 @@ body {
     --switchSpinner: white;
     --switch: #5f616d;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
+td span{
+  padding: 0;
+  margin: 0;
+}
 h1 {
     margin: 0;
     font-size: 1.7em !important;
@@ -48,29 +55,25 @@ h2 {
 .grid-wrapper{
   display: grid;
   grid-gap: 24px;
-  grid-template-columns: repeat(5 , 1fr);
+  grid-template-columns: 1fr 4fr;
 }
 .navigation{
   grid-column: span 1;
 }
 .main{
-  grid-column: span 4;
-  /* background-color: rgba(255, 0, 0, 0.158); */
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(400px , 1fr));
-  margin-top: 24px;
-  margin-bottom: 48px;
+  grid-template-columns: 1fr 1fr;
+  margin: 48px 32px;
   grid-gap: 96px;
 }
 .main-full{
   display: grid;
-  grid-column: span 4;
   grid-template-columns: 1fr;
   margin: auto;
   grid-gap: 96px;
-/*   background-color: green; */
-  margin-top: 24px;
-  margin-bottom: 48px;
+  /* background-color: green; */
+  margin: 48px 32px;
+
 }
 
 .p-sticky-135 {

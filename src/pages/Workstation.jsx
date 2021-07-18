@@ -12,8 +12,8 @@ const Workstation = () => {
     return (
         <WorkstationState>
             <div className="main">
-                <TableWorkstation />
                 <FormWorkstation />
+                <TableWorkstation />
             </div>
         </WorkstationState>
     );
