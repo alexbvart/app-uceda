@@ -220,7 +220,7 @@
         "current": 100,
         "security": 30,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": "1",
@@ -235,7 +235,7 @@
         "current": 50,
         "security": 30,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": "1",
@@ -250,7 +250,7 @@
         "current": 80,
         "security": 30,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": "1",
@@ -265,7 +265,7 @@
         "current": 20,
         "security": 30,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": "1",
@@ -280,7 +280,7 @@
         "current": 20,
         "security": 30,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": "1",
@@ -295,7 +295,7 @@
         "current": 120,
         "security": 30,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": "1",
@@ -310,7 +310,7 @@
         "current": 97,
         "security": 40,
         "min": 30,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": 2,
@@ -326,7 +326,7 @@
         "current": 13,
         "security": 30,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": 2,
@@ -342,7 +342,7 @@
         "current": 24,
         "security": 35,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": 2,
@@ -358,7 +358,7 @@
         "current": 14,
         "security": 30,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": 2,
@@ -374,7 +374,7 @@
         "current": 13,
         "security": 15,
         "min": 10,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": 2,
@@ -390,7 +390,7 @@
         "current": 23,
         "security": 25,
         "min": 20,
-        "reorder_point" : 10
+        "reorder_point": 10
       },
       "status": true,
       "categoriasId": 2,
@@ -533,7 +533,29 @@
       "name": "Arduino"
     }
   ],
-  "entradas": [],
+  "salidas": [],
+  "conceptosalidas": [
+    {
+      "name": "Devolución a proveedor",
+      "description": "Aquí se engloban tanto los enviados por problemas de calidad, como las devoluciones de envases y embalajes.",
+      "id": 2
+    },
+    {
+      "name": "Envíos a otros almacenes ",
+      "description": "Aquí se engloban movimientos de un almacen/centro a otro.",
+      "id": 3
+    },
+    {
+      "name": "Regularización de recuento físico",
+      "description": "Para ajustar los valores de stock en menos, sean causados por deterioro, perdida o robo",
+      "id": 4
+    },
+    {
+      "name": "A clientes",
+      "description": "Ventas a clientes en general",
+      "id": 5
+    }
+  ],
   "proveedores": [
     {
       "ruc": "20529874155",
@@ -617,5 +639,27 @@
       "id": 10
     }
   ],
-  "salidas": []
+  "entradas": [],
+  "conceptoentradas": [
+    {
+      "name": "De proveedor:",
+      "description": "En estos se incluyen todas las recepciones de los distintos productos comprados por la empresa. Pueden ser de producto acabado para su comercialización, de materias primas, de repuestos y de nuevos envases y embalajes.",
+      "id": 1
+    },
+    {
+      "name": "Devolución de cliente",
+      "description": "Todo el material rechazado por clientes por algún tipo de defecto o malentendido.",
+      "id": 2
+    },
+    {
+      "name": "Recepción de otros almacenes",
+      "description": "",
+      "id": 3
+    },
+    {
+      "name": "Regularización de recuento físico",
+      "description": "Al procederse al stock puede que, para ajustar existencias, se tengan que realizar entradas de productos",
+      "id": 4
+    }
+  ]
 }

@@ -25,14 +25,9 @@ const Navigation = () => {
                             (<>
                                 <label className="my-4">Operaciones</label>
                                 <Link
-                                    to="venta"
-                                    className=" a-link-nav flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
-                                    <span className="leading-none">Venta</span>
-                                </Link>
-                                <Link
                                     to="/stock"
                                     className=" a-link-nav flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
-                                    <span className="leading-none">Stock</span>
+                                    <span className="leading-none">Control de Stock</span>
                                 </Link>
                                 <Link
                                     to="/salida"
@@ -40,9 +35,9 @@ const Navigation = () => {
                                     <span className="leading-none">Salida de Productos</span>
                                 </Link>
                                 <Link
-                                    to="/outlest"
+                                    to="/entrada"
                                     className="a-link-nav flex items-center justify-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded bg--cardGray-hover" href="#">
-                                    <span className="leading-none">Bajas de Productos</span>
+                                    <span className="leading-none">Entrada de productos</span>
                                 </Link>
 
 

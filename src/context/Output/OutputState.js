@@ -1,42 +1,28 @@
 import axios from 'axios';
 import React, {useState} from 'react';
-import OutputContext from './OutputContext';
+import OutputContext from './OutputContext'
 
 
 const OutputState = ({children}) => {
 
     const OUTPUT_API_URL =`${process.env.REACT_APP_API}/salidas`;
+    const OUTPUT_CONCEPT_API_URL =`${process.env.REACT_APP_API}/conceptosalidas`;
 
     const [output, setOutput]               = useState([])
-    const [loss, setLoss]                   = useState([])
-    const [stolen, setStolen]               = useState([])
     const [sale, setSale]                   = useState([])
-    const [deterioration, setDeterioration] = useState([])
+    const [concepts, setConcepts]           = useState([])
+
     
     const getOutput = async()=>{
         const res = await axios.get(`${OUTPUT_API_URL}/all`);
         console.log(res.data);
         setOutput(res.data) 
     }
-    const getLoss = async()=>{
-        const res = await axios.get(`${OUTPUT_API_URL}/loss`);
-        console.log(res.data);
-        setLoss(res.data) 
-    }
-    const getStolen = async()=>{
-        const res = await axios.get(`${OUTPUT_API_URL}/stolen`);
-        console.log(res.data);
-        setStolen(res.data) 
-    }
+
     const getSale = async()=>{
         const res = await axios.get(`${OUTPUT_API_URL}/sale`);
         console.log(res.data);
         setSale(res.data) 
-    }
-    const getDeterioration = async()=>{
-        const res = await axios.get(`${OUTPUT_API_URL}/deterioration`);
-        console.log(res.data);
-        setDeterioration(res.data) 
     }
 
 
@@ -53,20 +39,29 @@ const OutputState = ({children}) => {
         await axios.delete(`${OUTPUT_API_URL}/${id}`)
     }
 
+    
+    const getOutflowsConcepts = async()=>{
+        const res = await axios.get(`${OUTPUT_CONCEPT_API_URL}`);
+        setConcepts(res.data)
+    }
+    const deleteOutflowsConcepts= async (id) => {
+        await axios.delete(`${OUTPUT_CONCEPT_API_URL}/${id}`)
+        getOutflowsConcepts()
+    }
 
     return ( 
         <>
-            <OutputContext.Provider 
+            <OutputContext.Provider
                 value={{
                     OUTPUT_API_URL,
                     output,              setOutput,              getOutput,
-                    loss,                setLoss,                getLoss,
-                    stolen,              setStolen,              getStolen,
                     sale,                setSale,                getSale,
-                    deterioration,       setDeterioration,       getDeterioration,
                     createOutput,
                     updateOutput,
-                    deleteOutput
+                    deleteOutput,
+                    OUTPUT_CONCEPT_API_URL,
+                    concepts,            setConcepts,            getOutflowsConcepts,
+                    deleteOutflowsConcepts
                 }}
         >
             {children}

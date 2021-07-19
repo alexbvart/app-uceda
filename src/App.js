@@ -40,7 +40,7 @@ function App() {
               <Route exact path='/puesto' component={Workstation} />
               <Route exact path='/empleado' component={Employees} />
               <Route exact path='/proveedor' component={Provider} />
-              <Route exact path='/outlest' component={ProductOutlets} />
+              <Route exact path='/salida' component={ProductOutlets} />
               <Route exact path='/stock' component={Stock} />
             </Switch>
           </Layout>
