@@ -4,7 +4,7 @@ import FormBrand from '../components/Brand/FormBrand';
 import TableBrand from '../components/Brand/TableBrand';
 const Brand = () => {
 
-    const baseURLbrand ='http://localhost:5000/marca';
+    const baseURLbrand ='http://localhost:3001/marcas';
 
     const [brands, setBrands] = useState([])
 
@@ -15,9 +15,6 @@ const Brand = () => {
 
     useEffect( async () => {
         await getBrands()
-        /* return () => {
-            cleanup
-        } */
     }, [])
 
 

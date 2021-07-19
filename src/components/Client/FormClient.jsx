@@ -41,6 +41,38 @@ const FormClient = ({ refreshGetClient }) => {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-4">
 
+
+                    <div className='col-md-3'>
+                        <label forhtml='dni'>DNI</label>
+                        <input
+                            type='number'
+                            name='dni'
+                            id='dni'
+                            placeholder='Ingrese dni'
+                            className='input'
+                            ref={
+                                register({
+                                    required: {
+                                        value: true,
+                                        message: 'dni obligatorio'
+                                    },
+                                    maxLength: {
+                                        value: 8,
+                                        message: 'No más de 8 carácteres!'
+                                    },
+                                    minLength: {
+                                        value: 8,
+                                        message: 'Mínimo 8 carácteres'
+                                    }
+                                })
+                            }
+                        ></input>
+                        <span className='text-danger text-small d-block mb-2'>
+                            {errors?.dni?.message}
+                        </span>
+                    </div>
+
+
                     <div className='col-md-3'>
                         <label forhtml='name'>Nombre</label>
                         <input
@@ -100,37 +132,6 @@ const FormClient = ({ refreshGetClient }) => {
                             {errors?.lastname?.message}
                         </span>
                     </div>
-
-                    <div className='col-md-3'>
-                        <label forhtml='dni'>DNI</label>
-                        <input
-                            type='number'
-                            name='dni'
-                            id='dni'
-                            placeholder='Ingrese dni'
-                            className='input'
-                            ref={
-                                register({
-                                    required: {
-                                        value: true,
-                                        message: 'dni obligatorio'
-                                    },
-                                    maxLength: {
-                                        value: 8,
-                                        message: 'No más de 8 carácteres!'
-                                    },
-                                    minLength: {
-                                        value: 8,
-                                        message: 'Mínimo 8 carácteres'
-                                    }
-                                })
-                            }
-                        ></input>
-                        <span className='text-danger text-small d-block mb-2'>
-                            {errors?.dni?.message}
-                        </span>
-                    </div>
-
 
                     <div className='col-md-3'>
                         <label forhtml='phone'>Número de celular</label>

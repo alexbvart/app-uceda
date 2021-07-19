@@ -4,19 +4,19 @@ import axios from 'axios';
 /* CONTEX */
 import ProductContext from '../../context/Product/ProductContext';
 
-const TableProduct = () => {
-    const {productsTrue,getProductsTrue} = useContext(ProductContext)
+const TableProductLow = () => {
+    const {lowStock,getLowStock} = useContext(ProductContext)
 
     useEffect(() => {
-        getProductsTrue()
-        console.log("ptrue:",productsTrue);
+        getLowStock()
+        console.log("ptrue:",lowStock);
     }, [])
 
     const baseURL = 'http://localhost:5000/productos';
 
     const deleteProduct = async (id) => {
         await axios.delete(`${baseURL}/${id}`)
-        getProductsTrue();
+        getLowStock();
         console.log(`${baseURL}/${id}`);
     }
 
@@ -24,7 +24,7 @@ const TableProduct = () => {
         <>
             <div className='flex flex-col items-center justify-center '>
 
-                <h1 className='text-lg font-medium'>Productos registrados</h1>
+                <h1 className='text-lg font-medium'>Productos que requieren reaprovisionamiento </h1>
                 <div className="flex flex-col mt-6">
 
                     <table className='max-w-full text-sm text-gray-400 mx-8'>
@@ -53,7 +53,7 @@ const TableProduct = () => {
                         </thead>
                         <tbody className=''>
                             {
-                                productsTrue.map((item) => (
+                                lowStock.map((item) => (
 
                                     (item !== null) 
                                     ? (
@@ -80,10 +80,10 @@ const TableProduct = () => {
                                         </td>
 
                                         <td className='px-3 py-2'>
-                                            <span className=''>{item.stock.current}</span>
+                                            <span className='text-pink-400'>{item.stock.current}</span>
                                         </td>
                                         <td className='px-3 py-2'>
-                                            <span className=''>{item.stock.security}</span>
+                                            <span className='text-green-300'>{item.stock.security}</span>
                                         </td>
                                         <td className='px-3 py-2'>
                                             <span className=''>{item.stock.min}</span>
@@ -101,4 +101,4 @@ const TableProduct = () => {
         </>
     );
 }
-export default TableProduct;
+export default TableProductLow;

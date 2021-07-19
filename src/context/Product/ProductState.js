@@ -26,7 +26,8 @@ const ProductState = ({children}) => {
     }
 
     const getProductsTrue = async()=>{
-        const res = await axios.get(`${PRODUCT_API_URL}/true`);
+        /* const res = await axios.get(`${PRODUCT_API_URL}/true`); */
+        const res = await axios.get(`${PRODUCT_API_URL}?status=true`);
         const Producttrue = res.data.filter( notnull => notnull!==null);
         setProductsTrue(Producttrue)
     }
@@ -38,7 +39,8 @@ const ProductState = ({children}) => {
     }
 
     const getLowStock = async()=>{
-        const res = await axios.get(`${PRODUCT_API_URL}/bajostock`);
+        const res = await axios.get(`${PRODUCT_API_URL}?stock.current_gte=20&stock.current_lte=30`);
+        /* const res = await axios.get(`${PRODUCT_API_URL}/bajostock`); */
         console.log(res.data);
         setLowStock(res.data) 
     }

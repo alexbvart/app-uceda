@@ -15,6 +15,7 @@ import ProductOutlets from './pages/ProductOutlets'
 import Layout from './pages/Layout';
 import Provider from './pages/Provider';
 import SubCategory from './pages/SubCategory';
+import Stock from './pages/Stock';
 
 /* CONTEXT */
 import DataSessionState from './context/DataSesion/DataSessionState';
@@ -40,6 +41,7 @@ function App() {
               <Route exact path='/empleado' component={Employees} />
               <Route exact path='/proveedor' component={Provider} />
               <Route exact path='/outlest' component={ProductOutlets} />
+              <Route exact path='/stock' component={Stock} />
             </Switch>
           </Layout>
         </DataSessionState>

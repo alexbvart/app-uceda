@@ -1,330 +1,621 @@
 {
-    "usuarios": [],
-    "roles": [],
-    "permisos": [],
-    "tiendas": [],
-    "puestos": [
-        {
-            "id": 1,
-            "name": "Ventas"
-        },
-        {
-            "id": 2,
-            "name": "Administrador"
-        },
-        {
-            "id": 3,
-            "name": "RR.HH."
-        },
-        {
-            "id": 4,
-            "name": "Contabilidad"
-        },
-        {
-            "id": 5,
-            "name": "Area Tecnica"
-        },
-        {
-            "id": 6,
-            "name": "Tecnologias de la informacion"
-        }
-    ],
-    "empleados": [
-        {
-            "id": 1,
-            "name": "Alfonso Alexander",
-            "lastname": "Briones Ventura",
-            "dni": "71602394",
-            "email": "abrionesv@unitru.edu.pe",
-            "phone": "972001932",
-            "birth": "09-02-1999",
-            "workstation": "Tecnologias de la informacion",
-            "workstationId": "6"
-        },
-        {
-            "name": "Nuri Victoria",
-            "lastname": "Tasilla Uceda",
-            "dni": "73670296",
-            "email": "ntasilla@unitru.edu.pe",
-            "phone": "900197392",
-            "birth": "25-01-1999",
-            "workstation": "Tecnologias de la informacion",
-            "workstationId": "6",
-            "id": 2
-        },
-        {
-            "name": "Izela",
-            "lastname": "Uceda Chunga",
-            "dni": "78563245",
-            "email": "izelauceda@uceda.com",
-            "phone": "978563245",
-            "birth": "25-12-1988",
-            "workstation": "Administrador",
-            "workstationId": "2",
-            "id": 3
-        },
-        {
-            "name": "Santiago",
-            "lastname": "Valverde",
-            "dni": "73593245",
-            "email": "santiagovalverde@uceda.com",
-            "phone": "973593245",
-            "birth": "25-10-1986",
-            "workstation": "Ventas",
-            "workstationId": "1",
-            "id": 4
-        },
-        {
-            "name": "Christian",
-            "lastname": "Rodriguez Pineda",
-            "dni": "73553241",
-            "email": "christianrodriguez@uceda.com",
-            "phone": "973553241",
-            "birth": "13-10-1989",
-            "workstation": "Ventas",
-            "workstationId": "1",
-            "id": 5
-        },
-        {
-            "name": "Francisco",
-            "lastname": "Davalos Ruiz",
-            "dni": "73961241",
-            "email": "franciscodavalos@uceda.com",
-            "phone": "973961241",
-            "birth": "25-02-1985",
-            "workstation": "Ventas",
-            "workstationId": "1",
-            "id": 6
-        },
-        {
-            "name": "Jesus",
-            "lastname": "Uceda Vigo",
-            "dni": "70967761",
-            "email": "jesusuceda@uceda.com",
-            "phone": "970967761",
-            "birth": "13-04-1995",
-            "workstation": "RR.HH.",
-            "workstationId": 3,
-            "id": 7
-        },
-        {
-            "name": "Isolina",
-            "lastname": "Ortiz Rodas",
-            "dni": "72467721",
-            "email": "christianrodriguez@uceda.com",
-            "phone": "972467721",
-            "birth": "03-04-1999",
-            "workstation": "Contabilidad",
-            "workstationId": 4,
-            "id": 8
-        }
-    ],
-    "clientes": [
-        {
-            "dni": "73693053",
-            "full_name": "FLOR ANALY PURIHUAMAN REYES",
-            "telephone": "973693053",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 7
-        },
-        {
-            "dni": "74693053",
-            "full_name": "BETSY RUBI DIAZ QUISPESIVANA",
-            "telephone": "974693053",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 8
-        },
-        {
-            "dni": "77693053",
-            "full_name": "JOSE JUNIOR ESPINOZA CABEL",
-            "telephone": "977693053",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 9
-        },
-        {
-            "dni": "73693059",
-            "full_name": "CRISTHIAN RICARDO CHANTA SANTOS",
-            "telephone": "973693059",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 10
-        },
-        {
-            "dni": "73693051",
-            "full_name": "CRISTHIAN RICARDO CHANTA SANTOS",
-            "telephone": "973693059",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 11
-        },
-        {
-            "dni": "73693051",
-            "full_name": "EDERSON ELIEL CONTRERAS VENTURA",
-            "telephone": "973693051",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 12
-        },
-        {
-            "dni": "73693052",
-            "full_name": "YENEFFER CARIN DE LA CRUZ MENDOZA",
-            "telephone": "973693052",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 13
-        },
-        {
-            "dni": "73693053",
-            "full_name": "FLOR ANALY PURIHUAMAN REYES",
-            "telephone": "973693053",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 14
-        },
-        {
-            "dni": "73693054",
-            "full_name": "WILMER PURIHUAMAN REYES",
-            "telephone": "973693054",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 15
-        },
-        {
-            "dni": "73693057",
-            "full_name": "JOSEFA SOLANYI HUAMAN CHINGUEL",
-            "telephone": "973693057",
-            "address": " ",
-            "legal_person": false,
-            "enterpriseId": 2,
-            "id": 16
-        }
-    ],
-    "productos": [],
-    "categorias":[
-        {"id": 1, "name": "Raspberry Pi Pico"},
-        {"id": 2, "name": "Arduino"},
-        {"id": 3, "name": "Qwiic"},
-        {"id": 4, "name": "MicroMod"},
-        {"id": 5, "name": "Sensores"},
-        {"id": 6, "name": "Hilo Conductivo"}
-    ],
-    "subcategorias":[
-        {"id": 1, "categoriasId": 2, "categoria":"Arduino","name": "Raspberry Pi Pico"},
-        {"id": 2, "categoriasId": 2, "categoria":"Arduino","name": "Placas Arduino"},
-        {"id": 3, "categoriasId": 2, "categoria":"Arduino","name": "Kits Arduino"},
-        {"id": 4, "categoriasId": 2, "categoria":"Arduino","name": "Shields Arduino"},
-        {"id": 5, "categoriasId": 2, "categoria":"Arduino","name": "Módulos"},
-        {"id": 6, "categoriasId": 5, "categoria":"Sensores","name": "Distancia / Proximidad"},
-        {"id": 7, "categoriasId": 5, "categoria":"Sensores","name": "Acelerómetro / IMU"},
-        {"id": 8, "categoriasId": 5, "categoria":"Sensores","name": "Temperatura / Humedad"},
-        {"id": 9, "categoriasId": 5, "categoria":"Sensores","name": "Fuerza"},
-        {"id": 10, "categoriasId": 5, "categoria":"Sensores","name": "Gas"},
-        {"id": 11, "categoriasId": 5, "categoria":"Sensores","name": "Inclinación / Vibración"},
-        {"id": 12, "categoriasId": 5, "categoria":"Sensores","name": "Otros"}
-    ],
-    "marcas":[
-        {"id": 1, "name": "SEEEDSTUDIO"},
-        {"id": 2, "name": "ADAFRUIT"},
-        {"id": 3, "name": "NEOPIXEL"},
-        {"id": 4, "name": "Pololu"},
-        {"id": 5, "name": "Seeedstudio"}
-    ],
-    
-    "entradas": [],
-    "proveedores": [
-        {
-            "ruc": "20529874155",
-            "company_name": "ELECTRONICA INDUSTRIAL Y SERVICIOS SOCIEDAD ANONIMA CERRADA",
-            "legal_representative": "Sanchez Ordinola Luis Felipe",
-            "telephone": "235999",
-            "address": "Cal. Nestor Martos Mza. a Lote. 30",
-            "legal_person": true,
-            "id": 1
-        },
-        {
-            "ruc": "20605774155",
-            "company_name": "4M COMPUTO-ELECTRONICA S.A.C.",
-            "legal_representative": "Sanchez Ordinola Luis Felipe",
-            "telephone": "(800) 848-6057",
-            "address": "1104 Washington Ferry Road",
-            "legal_person": true,
-            "id": 3
-        },
-        {
-            "ruc": "20482091904",
-            "company_name": "A&S SEGEL SEGURIDAD ELECTRONICA E.I.R.L.",
-            "legal_representative": "Vargas Lopez Maria Irma del Carmen",
-            "telephone": "452706",
-            "address": "Jr. los Condores Nro. 264, Bellavista, Prov. Const. del Callao, Perú",
-            "legal_person": true,
-            "id": 4
-        },
-        {
-            "ruc": "20100020441",
-            "company_name": "ACCESORIOS ELECTRICOS DE NUEVA TECNOLOGIA E INDUSTRIAS ELECTRONICAS SRL",
-            "legal_representative": "Salhuana Paredes Carlos Eduardo",
-            "telephone": "3368102",
-            "address": "Av. Encalada Nro. 1257 Int. 803, Santiago de Surco, Lima, Perú",
-            "legal_person": true,
-            "id": 5
-        },
-        {
-            "ruc": "20392923277",
-            "company_name": "ALFA ELECTRONICA Y SISTEMAS S.R.L.",
-            "legal_representative": "Salhuana Paredes Carlos Eduardo",
-            "telephone": "3360230",
-            "address": "Km. 7.5 Autopista Ramiro Priale, Lurigancho, Lima, Perú",
-            "legal_person": true,
-            "id": 6
-        },
-        {
-            "ruc": "20604708169",
-            "company_name": "ALL SYSTEMS EQUIPOS Y ELECTRONICA E.I.R.L.",
-            "legal_representative": "Baca Nakamine Brian Obdulio",
-            "telephone": "2199225",
-            "address": "Av. Almirante Miguel Grau Nro. 292 Int. 236, La Victoria, Lima, Perú.",
-            "legal_person": true,
-            "id": 7
-        },
-        {
-            "ruc": "20510673710",
-            "company_name": "ANALITICA Y ELECTRONICA EIRL",
-            "legal_representative": "Riquelme Gonzalez Pablo Christian",
-            "telephone": "4511819",
-            "address": "Av. Republica de Argentina Nro. 4090, Tarapaca, Prov. Const. del Callao, Perú",
-            "legal_person": true,
-            "id": 8
-        },
-        {
-            "ruc": "20503840121",
-            "company_name": "ARYUS ELECTRONICA S.A.C",
-            "legal_representative": "Carbo Conte Orlando Jesus",
-            "telephone": "2156225 ",
-            "address": "Av. Victor Andres Belaunde Nro. 147 Int. 301 Edificio Real 5, San Isidro, Lima, Perú",
-            "legal_person": true,
-            "id": 9
-        },
-        {
-            "ruc": "20100006538",
-            "company_name": "ARIONELL ENTERPRISE OF PERU S.A.C.",
-            "legal_representative": "Lozano Garcia Naranjo Fernando Javie",
-            "telephone": "4294978  ",
-            "address": "Av. Saenz Peña Nro. 1439, Prov. Const. del Callao, Perú",
-            "legal_person": true,
-            "id": 10
-        }
-    ],
-    "salidas": []
+  "usuarios": [],
+  "roles": [],
+  "permisos": [],
+  "tiendas": [],
+  "puestos": [
+    {
+      "id": 1,
+      "name": "Ventas"
+    },
+    {
+      "id": 2,
+      "name": "Administrador"
+    },
+    {
+      "id": 3,
+      "name": "RR.HH."
+    },
+    {
+      "id": 4,
+      "name": "Contabilidad"
+    },
+    {
+      "id": 5,
+      "name": "Area Tecnica"
+    },
+    {
+      "id": 6,
+      "name": "Tecnologias de la informacion"
+    }
+  ],
+  "empleados": [
+    {
+      "id": 1,
+      "name": "Alfonso Alexander",
+      "lastname": "Briones Ventura",
+      "dni": "71602394",
+      "email": "abrionesv@unitru.edu.pe",
+      "phone": "972001932",
+      "birth": "09-02-1999",
+      "workstation": "Tecnologias de la informacion",
+      "workstationId": "6"
+    },
+    {
+      "name": "Nuri Victoria",
+      "lastname": "Tasilla Uceda",
+      "dni": "73670296",
+      "email": "ntasilla@unitru.edu.pe",
+      "phone": "900197392",
+      "birth": "25-01-1999",
+      "workstation": "Tecnologias de la informacion",
+      "workstationId": "6",
+      "id": 2
+    },
+    {
+      "name": "Izela",
+      "lastname": "Uceda Chunga",
+      "dni": "78563245",
+      "email": "izelauceda@uceda.com",
+      "phone": "978563245",
+      "birth": "25-12-1988",
+      "workstation": "Administrador",
+      "workstationId": "2",
+      "id": 3
+    },
+    {
+      "name": "Santiago",
+      "lastname": "Valverde",
+      "dni": "73593245",
+      "email": "santiagovalverde@uceda.com",
+      "phone": "973593245",
+      "birth": "25-10-1986",
+      "workstation": "Ventas",
+      "workstationId": "1",
+      "id": 4
+    },
+    {
+      "name": "Christian",
+      "lastname": "Rodriguez Pineda",
+      "dni": "73553241",
+      "email": "christianrodriguez@uceda.com",
+      "phone": "973553241",
+      "birth": "13-10-1989",
+      "workstation": "Ventas",
+      "workstationId": "1",
+      "id": 5
+    },
+    {
+      "name": "Francisco",
+      "lastname": "Davalos Ruiz",
+      "dni": "73961241",
+      "email": "franciscodavalos@uceda.com",
+      "phone": "973961241",
+      "birth": "25-02-1985",
+      "workstation": "Ventas",
+      "workstationId": "1",
+      "id": 6
+    },
+    {
+      "name": "Jesus",
+      "lastname": "Uceda Vigo",
+      "dni": "70967761",
+      "email": "jesusuceda@uceda.com",
+      "phone": "970967761",
+      "birth": "13-04-1995",
+      "workstation": "RR.HH.",
+      "workstationId": 3,
+      "id": 7
+    },
+    {
+      "name": "Isolina",
+      "lastname": "Ortiz Rodas",
+      "dni": "72467721",
+      "email": "christianrodriguez@uceda.com",
+      "phone": "972467721",
+      "birth": "03-04-1999",
+      "workstation": "Contabilidad",
+      "workstationId": 4,
+      "id": 8
+    }
+  ],
+  "clientes": [
+    {
+      "dni": "73693053",
+      "full_name": "FLOR ANALY PURIHUAMAN REYES",
+      "telephone": "973693053",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 7
+    },
+    {
+      "dni": "74693053",
+      "full_name": "BETSY RUBI DIAZ QUISPESIVANA",
+      "telephone": "974693053",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 8
+    },
+    {
+      "dni": "77693053",
+      "full_name": "JOSE JUNIOR ESPINOZA CABEL",
+      "telephone": "977693053",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 9
+    },
+    {
+      "dni": "73693059",
+      "full_name": "CRISTHIAN RICARDO CHANTA SANTOS",
+      "telephone": "973693059",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 10
+    },
+    {
+      "dni": "73693051",
+      "full_name": "CRISTHIAN RICARDO CHANTA SANTOS",
+      "telephone": "973693059",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 11
+    },
+    {
+      "dni": "73693051",
+      "full_name": "EDERSON ELIEL CONTRERAS VENTURA",
+      "telephone": "973693051",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 12
+    },
+    {
+      "dni": "73693052",
+      "full_name": "YENEFFER CARIN DE LA CRUZ MENDOZA",
+      "telephone": "973693052",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 13
+    },
+    {
+      "dni": "73693053",
+      "full_name": "FLOR ANALY PURIHUAMAN REYES",
+      "telephone": "973693053",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 14
+    },
+    {
+      "dni": "73693054",
+      "full_name": "WILMER PURIHUAMAN REYES",
+      "telephone": "973693054",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 15
+    },
+    {
+      "dni": "73693057",
+      "full_name": "JOSEFA SOLANYI HUAMAN CHINGUEL",
+      "telephone": "973693057",
+      "address": " ",
+      "legal_person": false,
+      "enterpriseId": 2,
+      "id": 16
+    }
+  ],
+  "productos": [
+    {
+      "name": "TIRA DE PINES MACHO 40 PINES PASO 2,54 MM",
+      "description": "",
+      "price": 5.3,
+      "stock": {
+        "current": 100,
+        "security": 30,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": "1",
+      "marcasId": "1",
+      "id": 1
+    },
+    {
+      "name": "TIRA DE PINES MACHO 40 PINES PASO 2,54 MM",
+      "description": "",
+      "price": 9.3,
+      "stock": {
+        "current": 50,
+        "security": 30,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": "1",
+      "marcasId": "2",
+      "id": 2
+    },
+    {
+      "name": "TIRA DE PINES DOBLE MACHO 40 PINES PASO 2,54 MM",
+      "description": "",
+      "price": 6.5,
+      "stock": {
+        "current": 80,
+        "security": 30,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": "1",
+      "marcasId": "2",
+      "id": 3
+    },
+    {
+      "name": "RASPBERRY PI PICO 2040",
+      "description": "La Raspberry Pi Pico RP2040 es una placa con microcontrolador de alto rendimento, bajo precio e interfaces digitales flexibles. La placa Pico viene con una fuente de alimentación SMPS integrada que genera los 3.3V necesarios para el chip RP2040 a partir de voltajes de entrada entre 1.8V a 5.5V dando una gran flexibilidad para alimentar la placa.",
+      "price": 17.5,
+      "stock": {
+        "current": 20,
+        "security": 30,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": "1",
+      "marcasId": "2",
+      "id": 4
+    },
+    {
+      "name": "TIRA DE PINES HEMBRA PARA RASPBERRY PI PICO",
+      "description": "La Raspberry Pi Pico es una placa que utiliza el nuevo microcontrolador RP2040 diseñado por Raspberry Pi. Viene con un procesador dual-core Arm Cortex-M0+ con 264KB de RAM interna y soporte para hasta 16Mb de Flash externos al chip.",
+      "price": 17.5,
+      "stock": {
+        "current": 20,
+        "security": 30,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": "1",
+      "marcasId": "7",
+      "id": 5
+    },
+    {
+      "name": "TIRA DE PINES APILABLES PARA RASPBERRY PI PICO",
+      "description": "La Raspberry Pi Pico es una placa que utiliza el nuevo microcontrolador RP2040 diseñado por Raspberry Pi. Viene con un procesador dual-core Arm Cortex-M0+ con 264KB de RAM interna y soporte para hasta 16Mb de Flash externos al chip.",
+      "price": 8.5,
+      "stock": {
+        "current": 120,
+        "security": 30,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": "1",
+      "marcasId": "6",
+      "id": 6
+    },
+    {
+      "name": "CONECTOR HEMBRA ARDUINO 10 PINES",
+      "description": "",
+      "price": 3.5,
+      "stock": {
+        "current": 97,
+        "security": 40,
+        "min": 30,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": 2,
+      "subcategoriasId": 1,
+      "marcasId": 7,
+      "id": 7
+    },
+    {
+      "name": "CONECTOR HEMBRA ARDUINO 10 PINES",
+      "description": "La placa Arduino UNO es un producto Open-Source que viene con procesador, totalmente montada y con un bootloader listo para conectar al USB del ordenador. Se programa con un sencillo entorno de desarrollo.",
+      "price": 30.8,
+      "stock": {
+        "current": 13,
+        "security": 30,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": 2,
+      "subcategoriasId": 1,
+      "marcasId": 7,
+      "id": 8
+    },
+    {
+      "name": "ARDUINO STARTER KIT ESPAÑOL ORIGINAL",
+      "description": "El Arduino Starter Kit es el kit oficial de Arduino para realizar 15 proyectos de diferentes niveles de dificultad, incluye un manual en español y todos los componentes necesarios.",
+      "price": 287.8,
+      "stock": {
+        "current": 24,
+        "security": 35,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": 2,
+      "subcategoriasId": 1,
+      "marcasId": 8,
+      "id": 9
+    },
+    {
+      "name": "KIT ARDUINO UNO PARA TECNOLOGÍA",
+      "description": "",
+      "price": 158.8,
+      "stock": {
+        "current": 14,
+        "security": 30,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": 2,
+      "subcategoriasId": 1,
+      "marcasId": 8,
+      "id": 10
+    },
+    {
+      "name": "KIT 37 SENSORES ARDUINO",
+      "description": "",
+      "price": 238.5,
+      "stock": {
+        "current": 13,
+        "security": 15,
+        "min": 10,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": 2,
+      "subcategoriasId": 3,
+      "marcasId": 8,
+      "id": 11
+    },
+    {
+      "name": "ARDUINO STARTER KIT INGLÉS ORIGINAL",
+      "description": "Kit oficial de Arduino para realizar 15 proyectos de diferentes niveles de dificultad.",
+      "price": 188.5,
+      "stock": {
+        "current": 23,
+        "security": 25,
+        "min": 20,
+        "reorder_point" : 10
+      },
+      "status": true,
+      "categoriasId": 2,
+      "subcategoriasId": 3,
+      "marcasId": 8,
+      "id": 12
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "name": "Raspberry Pi Pico"
+    },
+    {
+      "id": 2,
+      "name": "Arduino"
+    },
+    {
+      "id": 3,
+      "name": "Qwiic"
+    },
+    {
+      "id": 4,
+      "name": "MicroMod"
+    },
+    {
+      "id": 5,
+      "name": "Sensores"
+    },
+    {
+      "id": 6,
+      "name": "Hilo Conductivo"
+    }
+  ],
+  "subcategorias": [
+    {
+      "id": 1,
+      "categoriasId": 2,
+      "categoria": "Arduino",
+      "name": "Raspberry Pi Pico"
+    },
+    {
+      "id": 2,
+      "categoriasId": 2,
+      "categoria": "Arduino",
+      "name": "Placas Arduino"
+    },
+    {
+      "id": 3,
+      "categoriasId": 2,
+      "categoria": "Arduino",
+      "name": "Kits Arduino"
+    },
+    {
+      "id": 4,
+      "categoriasId": 2,
+      "categoria": "Arduino",
+      "name": "Shields Arduino"
+    },
+    {
+      "id": 5,
+      "categoriasId": 2,
+      "categoria": "Arduino",
+      "name": "Módulos"
+    },
+    {
+      "id": 6,
+      "categoriasId": 5,
+      "categoria": "Sensores",
+      "name": "Distancia / Proximidad"
+    },
+    {
+      "id": 7,
+      "categoriasId": 5,
+      "categoria": "Sensores",
+      "name": "Acelerómetro / IMU"
+    },
+    {
+      "id": 8,
+      "categoriasId": 5,
+      "categoria": "Sensores",
+      "name": "Temperatura / Humedad"
+    },
+    {
+      "id": 9,
+      "categoriasId": 5,
+      "categoria": "Sensores",
+      "name": "Fuerza"
+    },
+    {
+      "id": 10,
+      "categoriasId": 5,
+      "categoria": "Sensores",
+      "name": "Gas"
+    },
+    {
+      "id": 11,
+      "categoriasId": 5,
+      "categoria": "Sensores",
+      "name": "Inclinación / Vibración"
+    },
+    {
+      "id": 12,
+      "categoriasId": 5,
+      "categoria": "Sensores",
+      "name": "Otros"
+    }
+  ],
+  "marcas": [
+    {
+      "id": 1,
+      "name": "SEEEDSTUDIO"
+    },
+    {
+      "id": 2,
+      "name": "ADAFRUIT"
+    },
+    {
+      "id": 3,
+      "name": "NEOPIXEL"
+    },
+    {
+      "id": 4,
+      "name": "Pololu"
+    },
+    {
+      "id": 5,
+      "name": "Seeedstudio"
+    },
+    {
+      "id": 6,
+      "name": "Raspberry Pi"
+    },
+    {
+      "id": 7,
+      "name": "Sparkfun"
+    },
+    {
+      "id": 8,
+      "name": "Arduino"
+    }
+  ],
+  "entradas": [],
+  "proveedores": [
+    {
+      "ruc": "20529874155",
+      "company_name": "ELECTRONICA INDUSTRIAL Y SERVICIOS SOCIEDAD ANONIMA CERRADA",
+      "legal_representative": "Sanchez Ordinola Luis Felipe",
+      "telephone": "235999",
+      "address": "Cal. Nestor Martos Mza. a Lote. 30",
+      "legal_person": true,
+      "id": 1
+    },
+    {
+      "ruc": "20605774155",
+      "company_name": "4M COMPUTO-ELECTRONICA S.A.C.",
+      "legal_representative": "Sanchez Ordinola Luis Felipe",
+      "telephone": "(800) 848-6057",
+      "address": "1104 Washington Ferry Road",
+      "legal_person": true,
+      "id": 3
+    },
+    {
+      "ruc": "20482091904",
+      "company_name": "A&S SEGEL SEGURIDAD ELECTRONICA E.I.R.L.",
+      "legal_representative": "Vargas Lopez Maria Irma del Carmen",
+      "telephone": "452706",
+      "address": "Jr. los Condores Nro. 264, Bellavista, Prov. Const. del Callao, Perú",
+      "legal_person": true,
+      "id": 4
+    },
+    {
+      "ruc": "20100020441",
+      "company_name": "ACCESORIOS ELECTRICOS DE NUEVA TECNOLOGIA E INDUSTRIAS ELECTRONICAS SRL",
+      "legal_representative": "Salhuana Paredes Carlos Eduardo",
+      "telephone": "3368102",
+      "address": "Av. Encalada Nro. 1257 Int. 803, Santiago de Surco, Lima, Perú",
+      "legal_person": true,
+      "id": 5
+    },
+    {
+      "ruc": "20392923277",
+      "company_name": "ALFA ELECTRONICA Y SISTEMAS S.R.L.",
+      "legal_representative": "Salhuana Paredes Carlos Eduardo",
+      "telephone": "3360230",
+      "address": "Km. 7.5 Autopista Ramiro Priale, Lurigancho, Lima, Perú",
+      "legal_person": true,
+      "id": 6
+    },
+    {
+      "ruc": "20604708169",
+      "company_name": "ALL SYSTEMS EQUIPOS Y ELECTRONICA E.I.R.L.",
+      "legal_representative": "Baca Nakamine Brian Obdulio",
+      "telephone": "2199225",
+      "address": "Av. Almirante Miguel Grau Nro. 292 Int. 236, La Victoria, Lima, Perú.",
+      "legal_person": true,
+      "id": 7
+    },
+    {
+      "ruc": "20510673710",
+      "company_name": "ANALITICA Y ELECTRONICA EIRL",
+      "legal_representative": "Riquelme Gonzalez Pablo Christian",
+      "telephone": "4511819",
+      "address": "Av. Republica de Argentina Nro. 4090, Tarapaca, Prov. Const. del Callao, Perú",
+      "legal_person": true,
+      "id": 8
+    },
+    {
+      "ruc": "20503840121",
+      "company_name": "ARYUS ELECTRONICA S.A.C",
+      "legal_representative": "Carbo Conte Orlando Jesus",
+      "telephone": "2156225 ",
+      "address": "Av. Victor Andres Belaunde Nro. 147 Int. 301 Edificio Real 5, San Isidro, Lima, Perú",
+      "legal_person": true,
+      "id": 9
+    },
+    {
+      "ruc": "20100006538",
+      "company_name": "ARIONELL ENTERPRISE OF PERU S.A.C.",
+      "legal_representative": "Lozano Garcia Naranjo Fernando Javie",
+      "telephone": "4294978  ",
+      "address": "Av. Saenz Peña Nro. 1439, Prov. Const. del Callao, Perú",
+      "legal_person": true,
+      "id": 10
+    }
+  ],
+  "salidas": []
 }
