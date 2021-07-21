@@ -41,9 +41,9 @@ const FormOutflows = () => {
                     <div className='info mb-4'>
                         Ingrese los datos de la de salida
                     </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
 
-                        <div className='col-md-4'>
+                        <div className=''>
                             <label forhtml='name'>Concepto de salida</label>
                             <input
                                 list="conceptsout"
@@ -80,7 +80,44 @@ const FormOutflows = () => {
                             </span>
                         </div>
                         
-                        <div className='col-md-4'>
+                                                <div className=''>
+                            <label forhtml='quantity'>Fecha</label>
+                            <input
+                                type='date'
+                                name='date'
+                                id='date'
+                                placeholder='Ingrese Fecha'
+                                className='input'
+                                min="1"
+                                ref={
+                                    register({
+                                        required: {
+                                            value: true,
+                                            message: 'Fecha obligatorio'
+                                        }
+                                    })
+                                }
+                            ></input>
+                            <span className='text-danger text-small d-block mb-2'>
+                                {errors?.date?.message}
+                            </span>
+                        </div>
+
+
+                        <div className='buttons flex items-center'>
+                            <button className='button'
+                            >
+                                Cancelar
+                            </button>
+                            <button
+                                type='submit'
+                                className='button button-primary'
+                                name='enviar'
+                            >
+                                Registrar
+                            </button>
+                        </div>
+                        <div className=''>
                             <label forhtml='name'>Nombre del producto</label>
                             <input
                                 list="product"
@@ -117,7 +154,7 @@ const FormOutflows = () => {
                             </span>
                         </div>
 
-                        <div className='col-md-4'>
+                        <div className=''>
                             <label forhtml='quantity'>Cantidad</label>
                             <input
                                 type='number'
@@ -147,51 +184,7 @@ const FormOutflows = () => {
                                 {errors?.quantity?.message}
                             </span>
                         </div>
-                        <div className='col-md-4'>
-                            <label forhtml='quantity'>Fecha</label>
-                            <input
-                                type='date'
-                                name='date'
-                                id='date'
-                                placeholder='Ingrese Fecha'
-                                className='input'
-                                min="1"
-                                ref={
-                                    register({
-                                        required: {
-                                            value: true,
-                                            message: 'Fecha obligatorio'
-                                        },
-                                        maxLength: {
-                                            value: 8,
-                                            message: 'No más de 8 carácteres!'
-                                        },
-                                        minLength: {
-                                            value: 1,
-                                            message: 'Mínimo 1 carácteres'
-                                        }
-                                    })
-                                }
-                            ></input>
-                            <span className='text-danger text-small d-block mb-2'>
-                                {errors?.date?.message}
-                            </span>
-                        </div>
 
-
-                        <div className='buttons flex items-center'>
-                            <button className='button'
-                            >
-                                Cancelar
-                            </button>
-                            <button
-                                type='submit'
-                                className='button button-primary'
-                                name='enviar'
-                            >
-                                Registrar
-                            </button>
-                        </div>
                     </div>
                 </div>
             </form>
